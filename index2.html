@@ -13,8 +13,6 @@
         <a-asset-item id="ball-mtl" src="model_obj/basketball/nba.mtl"></a-asset-item>
         <a-asset-item id="fish-obj" src="model_obj/fish/fish-2.obj"></a-asset-item>
         <a-asset-item id="fish-mtl" src="model_obj/fish/fish-2.mtl"></a-asset-item>
-        <a-asset-item id="earth-obj" src="model_obj/earth/earth_ball.obj"></a-asset-item>
-        <a-asset-item id="earth-mtl" src="model_obj/earth/earth_ball.mtl"></a-asset-item>
     </a-assets>
     </a-marker>
     <a-marker id="softbank" type="pattern" url="model_pattern/softbank5g.patt">
@@ -24,7 +22,7 @@
         <a-obj-model id="fish" src="#fish-obj" mtl="#fish-mtl" position="0 0 0" scale="0.2 0.2 0.2" rotation="0 45 0"></a-obj-model>
     </a-marker>
     <a-marker id="sb" type="pattern" url="model_pattern/sb.patt">
-        <a-obj-model id="ball" src="#ball-obj" position="0 0 0" scale="0.05 0.05 0.05" rotation="0 0 0"></a-obj-model>
+        <a-obj-model id="ball" src="#ball-obj" mtl="#ball-mtl" position="0 0 0" scale="0.03 0.03 0.03" rotation="0 0 0"></a-obj-model>
     </a-marker>
     <a-entity camera></a-entity>
 </a-scene>
