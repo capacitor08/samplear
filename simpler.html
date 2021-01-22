@@ -36,11 +36,13 @@
         <a-asset-item id="fish-obj" src="model_obj/fish/fish-2.obj"></a-asset-item>
         <a-asset-item id="fish-mtl" src="model_obj/fish/fish-2.mtl"></a-asset-item>
         <a-asset-item id="painfbx" src="video/Samba Dancing.fbx"></a-asset-item>
+        <a-asset-item id="deer" src="https://cdn.glitch.com/9f0ee472-bcb4-4dbf-ae0f-da422731a55c%2Fscene.gltf?v=1562656342372"></a-asset-item>
         <video id="vid" autoplay loop="true" muted src="video/C2.mp4"></video>
     </a-assets>
     </a-marker>
     <a-marker id="softbank" type="pattern" url="model_pattern/blive.patt">
-        <a-obj-model id="santasb" src="#santa-obj" mtl="#santa-mtl" position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0"></a-obj-model>
+        <a-entity scale="0.1 0.1 0.1" position="0 0 0" gltf-model="#deer"
+                animation-mixer="clip: Take 001; "> </a-entity>
     </a-marker>
     <a-marker id="basket" type="pattern" url="model_pattern/sb.patt">
     	<a-entity fbx-model="src: #painfbx;" position="0 0 0" scale="0.001 0.001 0.001"></a-entity>
