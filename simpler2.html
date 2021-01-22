@@ -39,7 +39,8 @@
                 animation-mixer="clip: Take 001; "> </a-entity>
     </a-marker>
     <a-marker id="basket" type="pattern" url="model_pattern/sb.patt">
-    	<a-gltf-model src="#pain" position="0 0 0" scale="0.03 0.03 0.03"></a-gltf-model>
+    	<a-entity scale="0.1 0.1 0.1" position="0 0 0" gltf-model="#pain"
+                animation-mixer="clip: Take 001; "> </a-entity>
     </a-marker>
     <a-marker id="sb" type="pattern" url="model_pattern/blive.patt" vidhandler>
         <a-plane position='0 -1 0' scale="7 7 7" rotation="0 0 0" material="shader: chromakey; src: #vid; color: 0.1 0.9 0.2"></a-plane>
