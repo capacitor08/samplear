@@ -69,12 +69,10 @@
       <!-- the path should end with the name without the extension e.g. if file is trex.fset' the path should end with trex -->
       <a-assets>
         <video id="otoshimavid" autoplay loop="true" muted src="./video/3_1_otoshima_ok.mp4"
-        preload="auto" response-type="arraybuffer" loop
                 crossorigin webkit-playsinline autoplay muted playsinline></video>
-                <video id="saitovid" autoplay loop="true" muted src="./video/4_1_saitouk_ok.mp4"
-        preload="auto" response-type="arraybuffer" loop
+        <video id="saitovid" autoplay loop="true" muted src="./video/4_1_saitouk_ok.mp4"
                 crossorigin webkit-playsinline autoplay muted playsinline></video>
-                <video id="sasakivid" autoplay loop="true" muted src="./video/6_1_sasaki.mp4"
+        <video id="sasakivid" autoplay loop="true" muted src="./video/6_1_sasaki.mp4"
                 crossorigin webkit-playsinline playsinline></video>
       </a-assets>
       <a-nft
@@ -88,8 +86,8 @@
           <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
           <a-video
                 position='0 0 0'
-                scale='1000 1000 1000'
-                material="shader: chromakey; src: #otoshima; color: 0.1 0.9 0.2"
+                scale='800 800 800'
+                material="shader: chromakey; src: #otoshimavid; color: 0.1 0.9 0.2"
                 webkit-playsinline playsinline
                 >
             </a-video>
@@ -104,7 +102,8 @@
         vidhandler>
           <a-video
                 position='0 0 0'
-                scale='1000 1000 1000'
+                width='540'
+                height='650'
                 material="shader: chromakey; src: #saitovid; color: 0.1 0.9 0.2"
                 webkit-playsinline playsinline
                 >
