@@ -9,10 +9,50 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
     <script>
-        AFRAME.registerComponent('vidhandler', {
+        AFRAME.registerComponent('vidotoshima', {
             init: function () {
             this.toggle = false;
             this.vid = document.querySelector("#otoshimavid")
+            this.vid.pause()
+        },
+            tick:function(){
+                if(this.el.object3D.visible == true){
+                    if(!this.toggle){
+                        this.toggle = true;
+                        this.vid.play();
+                    }
+                }else{
+                    this.toggle = false;
+                    this.vid.pause();
+                }
+            }
+        });
+    </script>
+    <script>
+        AFRAME.registerComponent('vidsasaki', {
+            init: function () {
+            this.toggle = false;
+            this.vid = document.querySelector("#sasakivid")
+            this.vid.pause()
+        },
+            tick:function(){
+                if(this.el.object3D.visible == true){
+                    if(!this.toggle){
+                        this.toggle = true;
+                        this.vid.play();
+                    }
+                }else{
+                    this.toggle = false;
+                    this.vid.pause();
+                }
+            }
+        });
+    </script>
+    <script>
+        AFRAME.registerComponent('vidsaito', {
+            init: function () {
+            this.toggle = false;
+            this.vid = document.querySelector("#saitovid")
             this.vid.pause()
         },
             tick:function(){
@@ -82,7 +122,7 @@
         smoothCount="10"
         smoothTolerance=".01"
         smoothThreshold="5"
-        vidhandler>
+        vidoshima>
           <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
           <a-video
                 position='0 0 0'
@@ -98,7 +138,8 @@
         smooth="true"
         smoothCount="10"
         smoothTolerance=".01"
-        smoothThreshold="5">
+        smoothThreshold="5"
+        vidsaito>
           <a-video
                 position='0 0 0'
                 scale='800 800 800'
@@ -113,7 +154,8 @@
         smooth="true"
         smoothCount="10"
         smoothTolerance=".01"
-        smoothThreshold="5">
+        smoothThreshold="5"
+        vidsasaki>
           <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
           <a-video
                 position='0 0 0'
