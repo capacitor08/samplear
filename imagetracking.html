@@ -8,6 +8,26 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
+    <script>
+        AFRAME.registerComponent('vidhandler', {
+            init: function () {
+            this.toggle = false;
+            this.vid = document.querySelector("#vid")
+            this.vid.pause()
+        },
+            tick:function(){
+                if(this.el.object3D.visible == true){
+                    if(!this.toggle){
+                        this.toggle = true;
+                        this.vid.play();
+                    }
+                }else{
+                    this.toggle = false;
+                    this.vid.pause();
+                }
+            }
+        });
+    </script>
 
     <!-- style for the loader -->
     <style>
@@ -54,7 +74,7 @@
         <a-asset-item id="santa-obj" src="./model_obj/santa/santa.obj"></a-asset-item>
         <a-asset-item id="santa-mtl" src="./model_obj/santa/santa.mtl"></a-asset-item>
         <video src="https://cors-anywhere.herokuapp.com/https://www.w3schools.com/html/mov_bbb.mp4"
-                preload="auto" id="vid" response-type="arraybuffer" loop
+                preload="auto" id="vid2" response-type="arraybuffer" loop
                 crossorigin webkit-playsinline autoplay muted playsinline>
             </video>
       </a-assets>
@@ -64,13 +84,30 @@
         smooth="true"
         smoothCount="10"
         smoothTolerance=".01"
+        smoothThreshold="5"
+        vidhandler>
+          <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
+          <a-video
+                src="#vid"
+                position='0 0 0'
+                width='600'
+                height='250'
+                >
+            </a-video>
+      </a-nft>
+      <a-nft
+        type="nft"
+        url="./samplear/imagetrack/otoshima"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
         smoothThreshold="5">
           <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
           <a-video
                 src="#vid"
                 position='0 0 0'
-                width='900'
-                height='525'
+                width='600'
+                height='350'
                 >
             </a-video>
       </a-nft>
