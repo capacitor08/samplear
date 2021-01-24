@@ -48,7 +48,9 @@
       <!-- on 'url' use the path to the Image Descriptors created before. -->
       <!-- the path should end with the name without the extension e.g. if file is trex.fset' the path should end with trex -->
       <a-assets>
-        <video id="vid" autoplay loop="true" muted src="./video/C2.mp4"></video>
+        <video id="vid" autoplay loop="true" muted src="./video/C2.mp4"
+        preload="auto" id="vid" response-type="arraybuffer" loop
+                crossorigin webkit-playsinline autoplay muted playsinline></video>
         <a-asset-item id="santa-obj" src="./model_obj/santa/santa.obj"></a-asset-item>
         <a-asset-item id="santa-mtl" src="./model_obj/santa/santa.mtl"></a-asset-item>
         <video src="https://cors-anywhere.herokuapp.com/https://www.w3schools.com/html/mov_bbb.mp4"
@@ -66,9 +68,9 @@
           <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
           <a-video
                 src="#vid"
-                position='50 150 -100'
-                width='300'
-                height='175'
+                position='0 0 0'
+                width='900'
+                height='525'
                 >
             </a-video>
       </a-nft>
