@@ -51,6 +51,10 @@
         <video id="vid" autoplay loop="true" muted src="./video/C2.mp4"></video>
         <a-asset-item id="santa-obj" src="./model_obj/santa/santa.obj"></a-asset-item>
         <a-asset-item id="santa-mtl" src="./model_obj/santa/santa.mtl"></a-asset-item>
+        <video src="https://cors-anywhere.herokuapp.com/https://www.w3schools.com/html/mov_bbb.mp4"
+                preload="auto" id="vid" response-type="arraybuffer" loop
+                crossorigin webkit-playsinline autoplay muted playsinline>
+            </video>
       </a-assets>
       <a-nft
         type="nft"
@@ -60,7 +64,13 @@
         smoothTolerance=".01"
         smoothThreshold="5">
           <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-          <a-obj-model id="santasb" src="#santa-obj" mtl="#santa-mtl" position="0 0 0" scale="20 20 20" rotation="0 0 0"></a-obj-model>
+          <a-video
+                src="#vid"
+                position='50 150 -100'
+                width='300'
+                height='175'
+                >
+            </a-video>
       </a-nft>
       <!-- static camera that moves according to the device movemenents -->
       <a-entity camera></a-entity>
