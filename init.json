@@ -71,5 +71,5 @@
   "API_base_url": "https://api.basketlive.jp/api/",
   "vod_base_url": "https://basketlive-vod-sni.akamaized.net/vod/",
   "live_base_url": "https://basketlive-live-sni.akamaized.net/live/",
-  "maintenance_mode": false
+  "maintenance_mode": true
 }
