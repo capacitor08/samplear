@@ -1,0 +1,26 @@
+{
+  "refresh_rate": 300,
+  "getting_started": "https://basketball.mb.softbank.jp/service/tv/firetv/consent.html",
+  "menu_title": "サービスについて",
+  "menu_urls": [
+    {
+      "title": "ご利用開始/サービス詳細はこちら",
+      "url": "https://baseball.mb.softbank.jp/service/"
+    },
+    {
+      "title": "よくあるご質問",
+      "url": "https://baseball.mb.softbank.jp/service/faq/"
+    },
+    {
+      "title": "利用規約",
+      "url": "https://baseball.mb.softbank.jp/service/terms.pdf"
+    },
+    {
+      "title": "プライバシーポリシー",
+      "url": "https://baseball.mb.softbank.jp/service/policy/ap p-policy.html"
+    }
+  ],
+  "API_base_url": "https://api.basketlive.jp/api/",
+  "maintenance_mode": false,
+  "force_upgrade_version": "0.0.1"
+}
