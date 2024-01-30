@@ -514,7 +514,7 @@
                 "premium"
             ],
             "publish": 1,
-            "game_state": 1,
+            "game_state": 0,
             "game_result": 1,
             "home_team": {
                 "id": 123,
@@ -567,7 +567,7 @@
                 "premium"
             ],
             "publish": 1,
-            "game_state": 1,
+            "game_state": 0,
             "game_result": 1,
             "home_team": {
                 "id": 123,
