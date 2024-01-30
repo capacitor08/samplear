@@ -85,12 +85,12 @@
             "title": "ホークス vs 西武",
             "thumbnail_image": "https://******/data/game/2005041504.png",
             "catchphrase": "王者奪還！・・・・・",
-            "permission": 1,
+            "permission": 0,
             "allow_member": [
                 "premium"
             ],
             "publish": 1,
-            "game_state": 1,
+            "game_state": 2,
             "game_result": 1,
             "home_team": {
                 "id": 123,
@@ -143,7 +143,7 @@
                 "premium"
             ],
             "publish": 1,
-            "game_state": 1,
+            "game_state": 3,
             "game_result": 1,
             "home_team": {
                 "id": 123,
@@ -196,7 +196,7 @@
                 "premium"
             ],
             "publish": 1,
-            "game_state": 1,
+            "game_state": 4,
             "game_result": 1,
             "home_team": {
                 "id": 123,
@@ -249,7 +249,7 @@
                 "premium"
             ],
             "publish": 1,
-            "game_state": 1,
+            "game_state": 5,
             "game_result": 1,
             "home_team": {
                 "id": 123,
@@ -302,7 +302,7 @@
                 "premium"
             ],
             "publish": 1,
-            "game_state": 1,
+            "game_state": 6,
             "game_result": 1,
             "home_team": {
                 "id": 123,
@@ -355,7 +355,7 @@
                 "premium"
             ],
             "publish": 1,
-            "game_state": 1,
+            "game_state": 7,
             "game_result": 1,
             "home_team": {
                 "id": 123,
@@ -408,7 +408,7 @@
                 "premium"
             ],
             "publish": 1,
-            "game_state": 1,
+            "game_state": 8,
             "game_result": 1,
             "home_team": {
                 "id": 123,
@@ -461,7 +461,7 @@
                 "premium"
             ],
             "publish": 1,
-            "game_state": 1,
+            "game_state": 9,
             "game_result": 1,
             "home_team": {
                 "id": 123,
