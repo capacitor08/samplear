@@ -1,3 +1,13 @@
 {
-	"url":"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"
+	"url":"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8",
+	"vod":{
+		"contractName":"eqg873nago",
+		"contractId":"6769",
+		"movieId":"45"
+	},
+	"live":{
+		"contractName":"eqg873nago",
+		"contractId":"6769",
+		"liveId":"14"
+	}
 }
