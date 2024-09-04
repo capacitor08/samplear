@@ -42,7 +42,7 @@
   ],
   "API_base_url": "https://dev-api.basketlive.jp/api/",
   "live_base_url": "https://basketlive-live-sni.akamaized.net/live/",
-  "maintenance_mode": true,
+  "maintenance_mode": false,
   "force_upgrade_version": "1.0.20",
   "sbcode_expires_in": 900,
   "sblogin_polling": 5
