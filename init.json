@@ -1,13 +1,13 @@
 {
   "refresh_rate": 300,
   "getting_started": "https://basketball.mb.softbank.jp/service/tv/firetv/consent.html",
-  "play_log_url": "https://track.basketlive.jp/v1/playlog",
+  "play_log_url": "https://dev-track.basketlive.jp/v1/playlog",
   "menu_title": "サービスについて",
-  "playcheck_cache_seconds": 300,
+  "playcheck_cache_seconds": 600,
   "menu_urls": [
     {
       "title": "利用規約",
-      "url": "https://basketball.mb.softbank.jp/service/application/terms/"
+      "url": "https://stn.mb.softbank.jp/X5X6e"
     },
     {
       "title": "よくある質問",
@@ -22,34 +22,6 @@
     {
       "feature_id": "3126",
       "title": "ウインターカップ"
-    },
-    {
-      "feature_id": "3135",
-      "title": "インカレ1日目"
-    },
-    {
-      "feature_id": "3136",
-      "title": "インカレ2日目"
-    },
-    {
-      "feature_id": "3137",
-      "title": "インカレ3日目"
-    },
-    {
-      "feature_id": "3138",
-      "title": "インカレ4日目"
-    },
-    {
-      "feature_id": "3139",
-      "title": "インカレ5日目"
-    },
-        {
-      "feature_id": "3140",
-      "title": "インカレ6日目"
-    },
-        {
-      "feature_id": "3141",
-      "title": "インカレ最終日"
     },
     {
       "feature_id": "3129",
@@ -68,8 +40,10 @@
       "title": "U15"
     }
   ],
-  "API_base_url": "https://api.basketlive.jp/api/",
-  "vod_base_url": "https://basketlive-vod-sni.akamaized.net/vod/",
+  "API_base_url": "https://dev-api.basketlive.jp/api/",
   "live_base_url": "https://basketlive-live-sni.akamaized.net/live/",
-  "maintenance_mode": false
+  "maintenance_mode": false,
+  "force_upgrade_version": "1.0.20",
+  "sbcode_expires_in": 900,
+  "sblogin_polling": 5
 }
