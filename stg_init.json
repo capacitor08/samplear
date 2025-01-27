@@ -18,7 +18,7 @@
       "url": "https://stn.mb.softbank.jp/20o5I"
     }
   ],
-  "API_base_url": "https://stg-api.bblive.io/api/",
+  "API_base_url": "https://api.baseball.mb.softbank.jp/api/",
   "maintenance_mode": false,
   "force_upgrade_version": "0.0.1"
 }
