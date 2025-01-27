@@ -22,6 +22,6 @@
     }
   ],
   "API_base_url": "https://stg-api.bblive.io/api/",
-  "maintenance_mode": false,
+  "maintenance_mode": true,
   "force_upgrade_version": "0.0.1"
 }
