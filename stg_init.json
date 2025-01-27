@@ -1,8 +1,5 @@
 {
-  "refresh_rate": 300,
-  "getting_started": "https://basketball.mb.softbank.jp/service/tv/firetv/consent.html",
   "max_item_for_more": 12,
-  "menu_title": "サービスについて",
   "menu_urls": [
     {
       "title": "ご利用開始/サービス詳細はこちら",
@@ -22,6 +19,6 @@
     }
   ],
   "API_base_url": "https://stg-api.bblive.io/api/",
-  "maintenance_mode": true,
+  "maintenance_mode": false,
   "force_upgrade_version": "0.0.1"
 }
