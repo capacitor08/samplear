@@ -1,0 +1,27 @@
+{
+  "refresh_rate": 300,
+  "getting_started": "https://basketball.mb.softbank.jp/service/tv/firetv/consent.html",
+  "max_item_for_more": 12,
+  "menu_title": "サービスについて",
+  "menu_urls": [
+    {
+      "title": "ご利用開始/サービス詳細はこちら",
+      "url": "https://stn.mb.softbank.jp/k0a6S"
+    },
+    {
+      "title": "よくあるご質問",
+      "url": "https://stn.mb.softbank.jp/u739U"
+    },
+    {
+      "title": "利用規約",
+      "url": "https://stn.mb.softbank.jp/28e2M"
+    },
+    {
+      "title": "プライバシーポリシー",
+      "url": "https://stn.mb.softbank.jp/k6T3c"
+    }
+  ],
+  "API_base_url": "https://stg-api.bblive.io/api/",
+  "maintenance_mode": false,
+  "force_upgrade_version": "0.0.1"
+}
