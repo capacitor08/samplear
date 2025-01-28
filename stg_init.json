@@ -1,4 +1,7 @@
 {
+  "API_base_url": "https://stg-api.bblive.io/api/",
+  "maintenance_mode": false,
+  "force_upgrade_version": "0.0.1",
   "max_item_for_more": 12,
   "menu_urls": [
     {
@@ -17,8 +20,5 @@
       "title": "アプリプライバシーポリシー",
       "url": "https://stn.mb.softbank.jp/20o5I"
     }
-  ],
-  "API_base_url": "https://api.baseball.mb.softbank.jp/api/",
-  "maintenance_mode": false,
-  "force_upgrade_version": "0.0.1"
+  ]
 }
