@@ -1,7 +1,7 @@
 {
   "API_base_url": "https://api.baseball.mb.softbank.jp/api/",
   "atv_maintenance_mode": false,
-  "atv_force_upgrade_version": "1.0.1",
+  "atv_force_upgrade_version": "0.0.1",
   "max_item_for_more": 12,
   "menu_urls": [
     {

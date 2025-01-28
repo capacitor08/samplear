@@ -5,20 +5,16 @@
   "max_item_for_more": 12,
   "menu_urls": [
     {
-      "title": "ご利用開始/サービス詳細はこちら",
-      "url": "https://stn.mb.softbank.jp/k0a6S"
+      "title": "ご利用開始/サービス詳細はこちら"
     },
     {
-      "title": "よくあるご質問",
-      "url": "https://stn.mb.softbank.jp/u739U"
+      "title": "よくあるご質問"
     },
     {
-      "title": "利用規約",
-      "url": "https://stn.mb.softbank.jp/28e2M"
+      "title": "利用規約"
     },
     {
-      "title": "プライバシーポリシー",
-      "url": "https://stn.mb.softbank.jp/k6T3c"
+      "title": "プライバシーポリシー"
     }
   ]
 }
