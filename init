@@ -1,7 +1,7 @@
 {
     "sid": "556432",
     "camera_num": 6,
-    "refresh_time": 5,
+    "refresh_time": 120,
     "web_button": 1,
     "web_button_url": "https://capacitor08.github.io/samplear/camera_black12.png",
     "web_url": "https://www.earth-mondahmin-cup.com/"
