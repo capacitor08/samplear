@@ -2,8 +2,8 @@
     {
         "device_id": "1",
         "serial_id": "1",
-        "x_coordinate": "0",
-        "y_coordinate": "0",
+        "xcoordinate": "0",
+        "ycoordinate": "0",
         "players": [
             "選手1",
             "選手2",
@@ -13,8 +13,8 @@
     {
         "device_id": "2",
         "serial_id": "2",
-        "x_coordinate": "1000",
-        "y_coordinate": "300",
+        "xcoordinate": "1000",
+        "ycoordinate": "300",
         "players": [
             "選手1",
             "選手2",
@@ -24,8 +24,8 @@
     {
         "device_id": "3",
         "serial_id": "3",
-        "x_coordinate": "500",
-        "y_coordinate": "300",
+        "xcoordinate": "500",
+        "ycoordinate": "300",
         "players": [
             "選手1",
             "選手2",
