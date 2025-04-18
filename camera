@@ -20,9 +20,9 @@
         "選手3"
     ]
 },{
-    "camera_no": 1,
-    "xcoordinate": 1000,
-    "ycoordinate": 625,
+    "camera_no": 2,
+    "xcoordinate": -1000,
+    "ycoordinate": -625,
     "active": 1,
     "system_active": 1,
     "contract_name": "test",
