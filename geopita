@@ -1,7 +1,7 @@
 [
     {
         "device_id": "1",
-        "serial_id": "1",
+        "serial_no": "1",
         "xcoordinate": "0",
         "ycoordinate": "0",
         "players": [
@@ -12,7 +12,7 @@
     },
     {
         "device_id": "2",
-        "serial_id": "2",
+        "serial_no": "2",
         "xcoordinate": "1000",
         "ycoordinate": "300",
         "players": [
@@ -23,7 +23,7 @@
     },
     {
         "device_id": "3",
-        "serial_id": "3",
+        "serial_no": "3",
         "xcoordinate": "500",
         "ycoordinate": "300",
         "players": [
