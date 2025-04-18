@@ -1,8 +1,8 @@
 [
 {
     "camera_no": 1,
-    "xcoordinate": 1000,
-    "ycoordinate": 625,
+    "xcoordinate": 0,
+    "ycoordinate": 0,
     "active": 1,
     "system_active": 1,
     "contract_name": "test",
