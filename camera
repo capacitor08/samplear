@@ -12,7 +12,7 @@
     "active_icon_url": "https://capacitor08.github.io/samplear/camera_black12.png",
     "inactive_icon_url": "https://capacitor08.github.io/samplear/camera_black12.png",
     "hole_name": "name",
-    "hole_icon_active_image_url": "https://capacitor08.github.io/samplear/camera_black12.png",
+    "hole_icon_active_image_url": "https://capacitor08.github.io/samplear/camera_gray12.png",
     "hole_info_image_url": "test",
     "players": [
         "選手1",
@@ -32,7 +32,7 @@
     "active_icon_url": "https://capacitor08.github.io/samplear/camera_black12.png",
     "inactive_icon_url": "https://capacitor08.github.io/samplear/camera_black12.png",
     "hole_name": "name",
-    "hole_icon_active_image_url": "https://capacitor08.github.io/samplear/camera_black12.png",
+    "hole_icon_active_image_url": "https://capacitor08.github.io/samplear/camera_gray12.png",
     "hole_info_image_url": "test",
     "players": [
         "選手1",
