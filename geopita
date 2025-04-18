@@ -31,5 +31,27 @@
             "選手2",
             "選手3"
         ]
+    },
+    {
+        "device_id": "4",
+        "serial_no": "4",
+        "xcoordinate": "0",
+        "ycoordinate": "1250",
+        "players": [
+            "選手1",
+            "選手2",
+            "選手3"
+        ]
+    },
+    {
+        "device_id": "5",
+        "serial_no": "5",
+        "xcoordinate": "2000",
+        "ycoordinate": "1250",
+        "players": [
+            "選手1",
+            "選手2",
+            "選手3"
+        ]
     }
 ]
