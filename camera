@@ -39,5 +39,45 @@
         "選手2",
         "選手3"
     ]
+},{
+    "camera_no": 3,
+    "xcoordinate": -1000,
+    "ycoordinate": -625,
+    "active": 1,
+    "system_active": 1,
+    "contract_name": "test",
+    "contract_id": "test",
+    "live_id": "ライブID",
+    "hole_no": 18,
+    "active_icon_url": "https://capacitor08.github.io/samplear/camera_black12.png",
+    "inactive_icon_url": "https://capacitor08.github.io/samplear/camera_black12.png",
+    "hole_name": "name",
+    "hole_icon_active_image_url": "https://capacitor08.github.io/samplear/camera_gray12.png",
+    "hole_info_image_url": "test",
+    "players": [
+        "選手1",
+        "選手2",
+        "選手3"
+    ]
+},{
+    "camera_no": 4,
+    "xcoordinate": -1000,
+    "ycoordinate": -625,
+    "active": 1,
+    "system_active": 1,
+    "contract_name": "test",
+    "contract_id": "test",
+    "live_id": "ライブID",
+    "hole_no": 18,
+    "active_icon_url": "https://capacitor08.github.io/samplear/camera_black12.png",
+    "inactive_icon_url": "https://capacitor08.github.io/samplear/camera_black12.png",
+    "hole_name": "name",
+    "hole_icon_active_image_url": "https://capacitor08.github.io/samplear/camera_gray12.png",
+    "hole_info_image_url": "test",
+    "players": [
+        "選手1",
+        "選手2",
+        "選手3"
+    ]
 }
 ]

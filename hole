@@ -1,4 +1,30 @@
-[{
+[
+{
     "hole_no": 1,
-    "hole_name": "9H"
-}]
+    "hole_name": "1H"
+},
+{
+    "hole_no": 2,
+    "hole_name": "2H"
+},
+{
+    "hole_no": 3,
+    "hole_name": "3H"
+},
+{
+    "hole_no": 4,
+    "hole_name": "4H"
+},
+{
+    "hole_no": 5,
+    "hole_name": "5H"
+},
+{
+    "hole_no": 6,
+    "hole_name": "6H"
+},
+{
+    "hole_no": 7,
+    "hole_name": "7H"
+}
+]
