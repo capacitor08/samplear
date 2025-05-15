@@ -2,8 +2,8 @@
   {
     "device_id": "352656103474246",
     "serial_no": "V21",
-    "xcoordinate": 3459,
-    "ycoordinate": 2188,
+    "xcoordinate": -200,
+    "ycoordinate": 200,
     "players": [
       "スタブ選手１",
       "スタブ選手２",
@@ -15,7 +15,7 @@
     "device_id": "352656106517736",
     "serial_no": "V25",
     "xcoordinate": 489,
-    "ycoordinate": 1009,
+    "ycoordinate": -500,
     "players": [
       "スタブ選手３",
       "スタブ選手４",
