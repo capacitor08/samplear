@@ -1,0 +1,30 @@
+[
+  {
+    "hole_no": 1,
+    "hole_name": "1H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+    "hole_info_image_url": ""
+  },
+  {
+    "hole_no": 2,
+    "hole_name": "2H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_2H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_2H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0607/test_2.PNG"
+  },
+  {
+    "hole_no": 3,
+    "hole_name": "3H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_3H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_3H_m.png",
+    "hole_info_image_url": ""
+  },
+  {
+    "hole_no": 4,
+    "hole_name": "4H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_4H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_4H_m.png",
+    "hole_info_image_url": ""
+  }
+]

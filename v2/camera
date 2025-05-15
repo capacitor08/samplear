@@ -1,0 +1,86 @@
+[
+  {
+    "camera_no": 1,
+    "xcoordinate": 2870,
+    "ycoordinate": 1269,
+    "active": 1,
+    "system_active": 1,
+    "contract_name": "contract_name1",
+    "contract_id": "10339",
+    "live_id": "C001",
+    "players": [
+      "スタブ選手１",
+      "スタブ選手２",
+      "スタブ選手３"
+    ],
+    "display_strings": [
+      3,
+      "スタブ選手２",
+      32
+    ],
+    "player_group_no1": 4,
+    "player_group_no2": 10,
+    "player_group_no3": 11,
+    "name_disp_mode": 1,
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_1.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_1_m.png",
+    "hole": [
+      {
+        "hole_no": 3,
+        "hole_name": "H03",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_3H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_3H.png",
+        "hole_info_image_url": ""
+      }
+    ]
+  },
+  {
+    "camera_no": 2,
+    "xcoordinate": 2100,
+    "ycoordinate": 900,
+    "active": 1,
+    "system_active": 1,
+    "contract_name": "contract_name2",
+    "contract_id": "10340",
+    "live_id": "C002",
+    "players": [
+      "スタブ選手4",
+      "スタブ選手5",
+      "スタブ選手6"
+    ],
+    "display_strings": [
+      4,
+      "スタブ選手4",
+      33
+    ],
+    "player_group_no1": 5,
+    "player_group_no2": 11,
+    "player_group_no3": 12,
+    "name_disp_mode": 1,
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_2.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_2_m.png",
+    "hole": [
+        {
+        "hole_no": 0,
+        "hole_name": "H00",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_3H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_3H.png",
+        "hole_info_image_url": ""
+      },
+            {
+        "hole_no": 3,
+        "hole_name": "H03",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_3H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_3H.png",
+        "hole_info_image_url": ""
+      },
+      {
+        "hole_no": 4,
+        "hole_name": "H04",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_4H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_4H.png",
+        "hole_info_image_url": ""
+      }
+    ]
+  }
+]

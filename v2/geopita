@@ -1,0 +1,42 @@
+[
+  {
+    "device_id": "352656103474246",
+    "serial_no": "V21",
+    "xcoordinate": 3459,
+    "ycoordinate": 2188,
+    "players": [
+      "スタブ選手１",
+      "スタブ選手２",
+      "スタブ選手３"
+    ],
+    "player_group_no": 1
+  },
+  {
+    "device_id": "352656106517736",
+    "serial_no": "V25",
+    "xcoordinate": 489,
+    "ycoordinate": 1009,
+    "players": [
+      "スタブ選手３",
+      "スタブ選手４",
+      "スタブ選手５"
+    ],
+    "player_group_no": 5
+  },
+  {
+    "device_id": "352656108474787",
+    "serial_no": "C02",
+    "xcoordinate": 778,
+    "ycoordinate": 1805,
+    "players": [],
+    "player_group_no": 0
+  },
+  {
+    "device_id": "352656108653356",
+    "serial_no": "C04",
+    "xcoordinate": 3211,
+    "ycoordinate": 998,
+    "players": [],
+    "player_group_no": 0
+  }
+]
