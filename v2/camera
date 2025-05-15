@@ -31,6 +31,13 @@
         "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_3H.png",
         "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_3H.png",
         "hole_info_image_url": ""
+      },
+      {
+        "hole_no": 4,
+        "hole_name": "H04",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_4H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_4H.png",
+        "hole_info_image_url": ""
       }
     ]
   },
