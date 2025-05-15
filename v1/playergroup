@@ -1,0 +1,154 @@
+[
+  {
+    "player_group_no": 1,
+    "xcoordinate": 3210,
+    "ycoordinate": 1300,
+    "active": 1,
+    "hole": [
+      {
+        "hole_no": 4,
+        "hole_name": "4H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_4H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_4H.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0607/test_4.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 1,
+        "name": "スタブ選手2",
+        "name_en": "test player2",
+        "rank": 1,
+        "score": 10
+      },
+      {
+        "active": 0,
+        "name": "スタブ選手3",
+        "name_en": "test player3",
+        "rank": 7,
+        "score": 50
+      },
+      {
+        "active": 1,
+        "name": "スタブ選手4",
+        "name_en": "test player4",
+        "rank": 20,
+        "score": 80
+      }
+    ]
+  },
+  {
+    "player_group_no": 2,
+    "xcoordinate": 3459,
+    "ycoordinate": 2188,
+    "active": 1,
+    "hole": [
+      {
+        "hole_no": 5,
+        "hole_name": "5H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_5H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_5H.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0607/test_5.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 1,
+        "name": "スタブ選手５",
+        "name_en": "test player5",
+        "rank": 6,
+        "score": 50
+      },
+      {
+        "active": 0,
+        "name": "スタブ選手６",
+        "name_en": "test player6",
+        "rank": 2,
+        "score": 40
+      },
+      {
+        "active": 1,
+        "name": "スタブ選手７",
+        "name_en": "test player7",
+        "rank": 10,
+        "score": 65
+      }
+    ]
+  },
+  {
+    "player_group_no": 3,
+    "xcoordinate": 3459,
+    "ycoordinate": 2188,
+    "active": 1,
+    "hole": [
+      {
+        "hole_no": 5,
+        "hole_name": "5H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_5H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_5H.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0607/test_5.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 1,
+        "name": "スタブ選手8",
+        "name_en": "test player8",
+        "rank": 6,
+        "score": 50
+      },
+      {
+        "active": 0,
+        "name": "スタブ選手9",
+        "name_en": "test player9",
+        "rank": 2,
+        "score": 40
+      },
+      {
+        "active": 1,
+        "name": "スタブ選手10",
+        "name_en": "test player10",
+        "rank": 10,
+        "score": 65
+      }
+    ]
+  },
+  {
+    "player_group_no": 4,
+    "xcoordinate": 3459,
+    "ycoordinate": 2188,
+    "active": 1,
+    "hole": [
+      {
+        "hole_no": 5,
+        "hole_name": "5H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_5H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_5H.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0607/test_5.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 1,
+        "name": "スタブ選手11",
+        "name_en": "test player11",
+        "rank": 6,
+        "score": 50
+      },
+      {
+        "active": 0,
+        "name": "スタブ選手12",
+        "name_en": "test player12",
+        "rank": 2,
+        "score": 40
+      },
+      {
+        "active": 1,
+        "name": "スタブ選手13",
+        "name_en": "test player13",
+        "rank": 10,
+        "score": 65
+      }
+    ]
+  }
+]
