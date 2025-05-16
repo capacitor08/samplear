@@ -7,7 +7,7 @@
     "system_active": 1,
     "contract_name": "contract_name1",
     "contract_id": "10339",
-    "live_id": "C001",
+    "live_id": "1",
     "players": [
       "スタブ選手１",
       "スタブ選手２",
@@ -55,7 +55,7 @@
     "system_active": 1,
     "contract_name": "contract_name2",
     "contract_id": "10340",
-    "live_id": "C002",
+    "live_id": "2",
     "players": [
       "スタブ選手4",
       "スタブ選手5",
@@ -66,7 +66,7 @@
       "スタブ選手4",
       33
     ],
-    "player_group_no1": 5,
+    "player_group_no1": 2,
     "player_group_no2": 11,
     "player_group_no3": 12,
     "name_disp_mode": 1,
