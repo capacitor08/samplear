@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Image based tracking AR.js demo</title>
+    <!-- import aframe and then ar.js with image tracking / location based features -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
+    <script>
+        AFRAME.registerComponent('vidotoshima', {
+            init: function () {
+            this.toggle = false;
+            this.vid = document.querySelector("#otoshimavid")
+            this.vid.pause()
+        },
+            tick:function(){
+                if(this.el.object3D.visible == true){
+                    if(!this.toggle){
+                        this.toggle = true;
+                        this.vid.play();
+                    }
+                }else{
+                    this.toggle = false;
+                    this.vid.pause();
+                }
+            }
+        });
+    </script>
+    <script>
+        AFRAME.registerComponent('vidsasaki', {
+            init: function () {
+            this.toggle = false;
+            this.vid = document.querySelector("#sasakivid")
+            this.vid.pause()
+        },
+            tick:function(){
+                if(this.el.object3D.visible == true){
+                    if(!this.toggle){
+                        this.toggle = true;
+                        this.vid.play();
+                    }
+                }else{
+                    this.toggle = false;
+                    this.vid.pause();
+                }
+            }
+        });
+    </script>
+    <script>
+        AFRAME.registerComponent('vidsaito', {
+            init: function () {
+            this.toggle = false;
+            this.vid = document.querySelector("#saitovid")
+            this.vid.pause()
+        },
+            tick:function(){
+                if(this.el.object3D.visible == true){
+                    if(!this.toggle){
+                        this.toggle = true;
+                        this.vid.play();
+                    }
+                }else{
+                    this.toggle = false;
+                    this.vid.pause();
+                }
+            }
+        });
+    </script>
+
+    <!-- style for the loader -->
+    <style>
+      .arjs-loader {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .arjs-loader div {
+        text-align: center;
+        font-size: 1.25em;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body style="margin : 0px; overflow: hidden;">
+    <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
+    <div class="arjs-loader">
+      <div>Loading, please wait...</div>
+    </div>
+
+    <!-- a-frame scene -->
+    <a-scene
+      vr-mode-ui="enabled: false;"
+      renderer="logarithmicDepthBuffer: true;"
+      embedded
+      arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+      <!-- a-nft is the anchor that defines an Image Tracking entity -->
+      <!-- on 'url' use the path to the Image Descriptors created before. -->
+      <!-- the path should end with the name without the extension e.g. if file is trex.fset' the path should end with trex -->
+      <a-assets>
+        <video id="otoshimavid" autoplay loop="true" muted src="./bigbuckbunny2025.mp4"
+                crossorigin webkit-playsinline autoplay muted playsinline></video>
+        <video id="saitovid" autoplay loop="true" muted src="./video/4_1_saitouk_ok.mp4"
+                crossorigin webkit-playsinline autoplay muted playsinline></video>
+        <video id="sasakivid" autoplay loop="true" muted src="./video/6_1_sasaki.mp4"
+                crossorigin webkit-playsinline playsinline></video>
+      </a-assets>
+      <a-nft
+        type="nft"
+        url="./samplear/imagetrack/otoshima"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5"
+        vidotoshima>
+          <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
+          <a-video
+                position='50 0 0'
+                scale='800 800 800'
+                material="shader: chromakey; src: #otoshimavid; color: 0.1 0.9 0.2"
+                webkit-playsinline playsinline
+                >
+            </a-video>
+      </a-nft>
+      <a-nft
+        type="nft"
+        url="./samplear/imagetrack/saito"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5"
+        vidsaito>
+          <a-video
+                position='50 100 0'
+                scale='800 800 800'
+                material="shader: chromakey; src: #saitovid; color: 0.1 0.9 0.2"
+                webkit-playsinline playsinline
+                >
+            </a-video>
+      </a-nft>
+      <a-nft
+        type="nft"
+        url="./samplear/imagetrack/sasaki"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5"
+        vidsasaki>
+          <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
+          <a-video
+                position='50 50 0'
+                scale='800 800 800'
+                material="shader: chromakey; src: #sasakivid; color: 0.1 0.9 0.2"
+                webkit-playsinline playsinline
+                >
+            </a-video>
+      </a-nft>
+      <!-- static camera that moves according to the device movemenents -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
