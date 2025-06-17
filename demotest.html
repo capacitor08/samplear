@@ -1,69 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>AR.js NFT Video Example</title>
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-  <style>
-    body { margin: 0; overflow: hidden; }
-    #startButton {
-      position: absolute;
-      z-index: 10;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 16px 24px;
-      font-size: 18px;
-    }
-  </style>
-</head>
-<body>
-  <button id="startButton">Start AR</button>
-  <a-scene
-    embedded
-    vr-mode-ui="enabled: false"
-    renderer="logarithmicDepthBuffer: true;"
-    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-  >
-    <a-assets>
-      <video
-        id="myVideo"
-        src="bigbuckbunny2025.mp4"
-        preload="auto"
-        loop
-        crossorigin="anonymous"
-        webkit-playsinline
-        playsinline
-      ></video>
-    </a-assets>
+  <head>
+    <meta charset="utf-8">
+    <title>AR.js Redirect on Image Detection</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
+      <a-assets></a-assets>
 
-    <a-nft
-      type="nft"
-      url="image1"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance="0.01"
-      smoothThreshold="5"
-    >
-      <a-video
-        src="#myVideo"
-        width="1"
-        height="0.5625"
-        position="0 0 0"
-        rotation="-90 0 0"
-      ></a-video>
-    </a-nft>
+      <!-- Marker 1 -->
+      <a-nft type="nft" url="./samplear/imagetrack/cute" id="marker1"></a-nft>
 
-    <a-entity camera></a-entity>
-  </a-scene>
+      <!-- Marker 2 -->
+      <a-nft type="nft" url="./samplear/imagetrack/trexbig" id="marker2"></a-nft>
 
-  <script>
-    const btn = document.getElementById('startButton');
-    const video = document.getElementById('myVideo');
-    btn.addEventListener('click', () => {
-      video.play();
-      btn.style.display = 'none';
-    });
-  </script>
-</body>
+      <a-entity camera></a-entity>
+    </a-scene>
+
+    <script>
+      const marker1 = document.querySelector("#marker1");
+      const marker2 = document.querySelector("#marker2");
+
+      marker1.addEventListener("markerFound", () => {
+        window.location.href = "video1.html";
+      });
+
+      marker2.addEventListener("markerFound", () => {
+        window.location.href = "video2.html";
+      });
+    </script>
+  </body>
 </html>
