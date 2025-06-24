@@ -1,85 +1,790 @@
 [
   {
     "camera_no": 1,
-    "xcoordinate": 0,
-    "ycoordinate": 0,
     "active": 1,
     "system_active": 1,
-    "contract_name": "contract_name1",
-    "contract_id": "10339",
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
     "live_id": "1",
-    "players": [
-      "スタブ選手１",
-      "スタブ選手２",
-      "スタブ選手３"
-    ],
-    "display_strings": [
-      3,
-      "スタブ選手２",
-      32
-    ],
-    "player_group_no1": 4,
-    "player_group_no2": 10,
-    "player_group_no3": 11,
-    "name_disp_mode": 1,
     "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_1.png",
     "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_1_m.png",
     "hole": [
       {
-        "hole_no": 0,
-        "hole_name": "H00",
-        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_3H.png",
-        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_3H.png",
-        "hole_info_image_url": ""
-      },{
-        "hole_no": 3,
-        "hole_name": "H03",
-        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_3H.png",
-        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_3H.png",
-        "hole_info_image_url": ""
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
       },
       {
-        "hole_no": 4,
-        "hole_name": "H04",
-        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_4H.png",
-        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_4H.png",
-        "hole_info_image_url": ""
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
       }
-    ]
+    ],
+    "players": [
+      "小林 夢果",
+      "後藤 未有",
+      "権藤 可恋"
+    ],
+    "display_strings": [
+      8,
+      0,
+      "アン シネ",
+      -6
+    ],
+    "player_group_no1": 19,
+    "player_group_no2": 7,
+    "player_group_no3": 5,
+    "player_disp_mode": 0,
+    "hole_link_mode": 0,
+    "xcoordinate": -298,
+    "ycoordinate": -598
   },
   {
     "camera_no": 2,
-    "xcoordinate": 300,
-    "ycoordinate": 900,
     "active": 1,
     "system_active": 1,
-    "contract_name": "contract_name2",
-    "contract_id": "10340",
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
     "live_id": "2",
-    "players": [
-      "スタブ選手4",
-      "スタブ選手5",
-      "スタブ選手6"
-    ],
-    "display_strings": [
-      4,
-      "スタブ選手4",
-      33
-    ],
-    "player_group_no1": 2,
-    "player_group_no2": 11,
-    "player_group_no3": 12,
-    "name_disp_mode": 1,
     "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_2.png",
     "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_2_m.png",
     "hole": [
       {
-        "hole_no": 3,
-        "hole_name": "H03",
-        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_3H.png",
-        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_3H.png",
-        "hole_info_image_url": ""
+        "hole_no": 2,
+        "hole_name": "2H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_2H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_2H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/2.PNG"
       }
-    ]
+    ],
+    "players": [],
+    "display_strings": [
+      2,
+      0,
+      "安田 祐香",
+      -5
+    ],
+    "player_group_no1": 0,
+    "player_group_no2": 0,
+    "player_group_no3": 0,
+    "player_disp_mode": 0,
+    "hole_link_mode": 1,
+    "xcoordinate": -934,
+    "ycoordinate": 76
+  },
+  {
+    "camera_no": 3,
+    "active": 1,
+    "system_active": 1,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "3",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_3.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_3_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      "新垣 比菜",
+      "荒川 怜郁",
+      "アン シネ"
+    ],
+    "display_strings": [
+      55,
+      0,
+      "後藤 未有",
+      2
+    ],
+    "player_group_no1": 3,
+    "player_group_no2": 13,
+    "player_group_no3": 19,
+    "player_disp_mode": 0,
+    "hole_link_mode": 0,
+    "xcoordinate": -329,
+    "ycoordinate": -567
+  },
+  {
+    "camera_no": 4,
+    "active": 1,
+    "system_active": 1,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "4",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_4.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_4_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      "吉本 ここね",
+      "吉本 ひかる",
+      "リ ハナ"
+    ],
+    "display_strings": [
+      23,
+      1,
+      "桑木 志帆",
+      -1
+    ],
+    "player_group_no1": 47,
+    "player_group_no2": 0,
+    "player_group_no3": 0,
+    "player_disp_mode": 1,
+    "hole_link_mode": 0,
+    "xcoordinate": -301,
+    "ycoordinate": -598
+  },
+  {
+    "camera_no": 5,
+    "active": 1,
+    "system_active": 1,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "5",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_5.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_5_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      "ベイブ・リュウ",
+      "ペ ソンウ",
+      "堀 琴音"
+    ],
+    "display_strings": [
+      23,
+      1,
+      "小林 光希",
+      0
+    ],
+    "player_group_no1": 38,
+    "player_group_no2": 0,
+    "player_group_no3": 0,
+    "player_disp_mode": 1,
+    "hole_link_mode": 0,
+    "xcoordinate": -286,
+    "ycoordinate": -558
+  },
+  {
+    "camera_no": 6,
+    "active": 1,
+    "system_active": 1,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "6",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_6.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_6_m.png",
+    "hole": [
+      {
+        "hole_no": 8,
+        "hole_name": "8H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_8H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_8H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/8.PNG"
+      }
+    ],
+    "players": [
+      "穴井 詩",
+      "阿部 未悠",
+      "天本 ハルカ"
+    ],
+    "display_strings": [
+      23,
+      0,
+      "江澤 亜弥",
+      -2
+    ],
+    "player_group_no1": 2,
+    "player_group_no2": 0,
+    "player_group_no3": 0,
+    "player_disp_mode": 1,
+    "hole_link_mode": 0,
+    "xcoordinate": -234,
+    "ycoordinate": -631
+  },
+  {
+    "camera_no": 7,
+    "active": 1,
+    "system_active": 1,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "7",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_7.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_7_m.png",
+    "hole": [
+      {
+        "hole_no": 2,
+        "hole_name": "2H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_2H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_2H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/2.PNG"
+      }
+    ],
+    "players": [],
+    "display_strings": [
+      23,
+      1,
+      "穴井 詩",
+      -1
+    ],
+    "player_group_no1": 0,
+    "player_group_no2": 0,
+    "player_group_no3": 0,
+    "player_disp_mode": 0,
+    "hole_link_mode": 1,
+    "xcoordinate": 960,
+    "ycoordinate": -948
+  },
+  {
+    "camera_no": 8,
+    "active": 1,
+    "system_active": 1,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "8",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_8.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_8_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      "植手 桃子",
+      "上野 菜々子",
+      "臼井 麗香"
+    ],
+    "display_strings": [
+      77,
+      0,
+      "武尾 咲希",
+      1
+    ],
+    "player_group_no1": 7,
+    "player_group_no2": 21,
+    "player_group_no3": 11,
+    "player_disp_mode": 0,
+    "hole_link_mode": 1,
+    "xcoordinate": 1242,
+    "ycoordinate": -974
+  },
+  {
+    "camera_no": 9,
+    "active": 1,
+    "system_active": 1,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "9",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_9.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_9_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      "植手 桃子",
+      "上野 菜々子",
+      "臼井 麗香"
+    ],
+    "display_strings": [
+      26,
+      0,
+      "大須賀 望",
+      -4
+    ],
+    "player_group_no1": 7,
+    "player_group_no2": 21,
+    "player_group_no3": 11,
+    "player_disp_mode": 0,
+    "hole_link_mode": 1,
+    "xcoordinate": 1532,
+    "ycoordinate": -978
+  },
+  {
+    "camera_no": 10,
+    "active": 1,
+    "system_active": 1,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "10",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_10.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_10_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      "植手 桃子",
+      "上野 菜々子",
+      "臼井 麗香"
+    ],
+    "display_strings": [
+      18,
+      0,
+      "植手 桃子",
+      1
+    ],
+    "player_group_no1": 7,
+    "player_group_no2": 21,
+    "player_group_no3": 11,
+    "player_disp_mode": 0,
+    "hole_link_mode": 1,
+    "xcoordinate": 1818,
+    "ycoordinate": -1022
+  },
+  {
+    "camera_no": 11,
+    "active": 1,
+    "system_active": 1,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "11",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_11.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_11_m.png",
+    "hole": [
+      {
+        "hole_no": 8,
+        "hole_name": "8H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_8H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_8H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/8.PNG"
+      }
+    ],
+    "players": [
+      "大出 瑞月",
+      "大里 桃子",
+      "大須賀 望"
+    ],
+    "display_strings": [
+      51,
+      0,
+      "小滝 水音",
+      -2
+    ],
+    "player_group_no1": 9,
+    "player_group_no2": 17,
+    "player_group_no3": 21,
+    "player_disp_mode": 0,
+    "hole_link_mode": 0,
+    "xcoordinate": -160,
+    "ycoordinate": -589
+  },
+  {
+    "camera_no": 12,
+    "active": 1,
+    "system_active": 1,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "12",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_12.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_12_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      "河本 結",
+      "菊地 絵理香",
+      "岸部 桃子"
+    ],
+    "display_strings": [
+      117,
+      0,
+      "三ヶ島 かな",
+      -3
+    ],
+    "player_group_no1": 15,
+    "player_group_no2": 3,
+    "player_group_no3": 13,
+    "player_disp_mode": 0,
+    "hole_link_mode": 0,
+    "xcoordinate": -400,
+    "ycoordinate": -485
+  },
+  {
+    "camera_no": 13,
+    "active": 1,
+    "system_active": 1,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "13",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_13.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_13_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      "須江 唯加",
+      "菅 楓華",
+      "菅沼 菜々"
+    ],
+    "display_strings": [
+      60,
+      1,
+      "大林 奈央",
+      5
+    ],
+    "player_group_no1": 23,
+    "player_group_no2": 11,
+    "player_group_no3": 5,
+    "player_disp_mode": 0,
+    "hole_link_mode": 0,
+    "xcoordinate": -247,
+    "ycoordinate": -559
+  },
+  {
+    "camera_no": 14,
+    "active": 1,
+    "system_active": 1,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "14",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_14.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_14_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      "小林 夢果",
+      "後藤 未有",
+      "権藤 可恋"
+    ],
+    "display_strings": [
+      43,
+      0,
+      "菊地 絵理香",
+      -4
+    ],
+    "player_group_no1": 19,
+    "player_group_no2": 13,
+    "player_group_no3": 5,
+    "player_disp_mode": 0,
+    "hole_link_mode": 0,
+    "xcoordinate": -304,
+    "ycoordinate": -567
+  },
+  {
+    "camera_no": 15,
+    "active": 1,
+    "system_active": 1,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "15",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_15.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_15_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      "河本 結",
+      "菊地 絵理香",
+      "岸部 桃子"
+    ],
+    "display_strings": [
+      10,
+      1,
+      "濱田 茉優",
+      -1
+    ],
+    "player_group_no1": 15,
+    "player_group_no2": 3,
+    "player_group_no3": 13,
+    "player_disp_mode": 0,
+    "hole_link_mode": 0,
+    "xcoordinate": -359,
+    "ycoordinate": -536
+  },
+  {
+    "camera_no": 16,
+    "active": 1,
+    "system_active": 0,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "16",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_16.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_16_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 8,
+        "hole_name": "8H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_8H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_8H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/8.PNG"
+      }
+    ],
+    "players": [
+      "植手 桃子",
+      "上野 菜々子",
+      "臼井 麗香"
+    ],
+    "display_strings": [
+      52,
+      0,
+      "小西 瑞穂",
+      -6
+    ],
+    "player_group_no1": 7,
+    "player_group_no2": 21,
+    "player_group_no3": 5,
+    "player_disp_mode": 0,
+    "hole_link_mode": 0,
+    "xcoordinate": -240,
+    "ycoordinate": -604
+  },
+  {
+    "camera_no": 17,
+    "active": 1,
+    "system_active": 0,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "17",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_17.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_17_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      "河本 結",
+      "菊地 絵理香",
+      "岸部 桃子"
+    ],
+    "display_strings": [
+      23,
+      1,
+      "桑木 志帆",
+      -1
+    ],
+    "player_group_no1": 15,
+    "player_group_no2": 13,
+    "player_group_no3": 5,
+    "player_disp_mode": 0,
+    "hole_link_mode": 0,
+    "xcoordinate": -318,
+    "ycoordinate": -532
+  },
+  {
+    "camera_no": 18,
+    "active": 1,
+    "system_active": 0,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "18",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_18.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_18_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      "新垣 比菜",
+      "荒川 怜郁",
+      "アン シネ"
+    ],
+    "display_strings": [
+      115,
+      0,
+      "前田 陽子",
+      1
+    ],
+    "player_group_no1": 3,
+    "player_group_no2": 15,
+    "player_group_no3": 13,
+    "player_disp_mode": 0,
+    "hole_link_mode": 0,
+    "xcoordinate": -362,
+    "ycoordinate": -558
+  },
+  {
+    "camera_no": 19,
+    "active": 1,
+    "system_active": 0,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "19",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_19.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_19_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      "新垣 比菜",
+      "荒川 怜郁",
+      "アン シネ"
+    ],
+    "display_strings": [
+      38,
+      1,
+      "脇元 華",
+      0
+    ],
+    "player_group_no1": 3,
+    "player_group_no2": 19,
+    "player_group_no3": 13,
+    "player_disp_mode": 0,
+    "hole_link_mode": 0,
+    "xcoordinate": -338,
+    "ycoordinate": -592
+  },
+  {
+    "camera_no": 20,
+    "active": 1,
+    "system_active": 0,
+    "contract_id": "10969",
+    "contract_name": "eql010lyyn",
+    "live_id": "20",
+    "active_icon_url": "https://assets.emc-api.com/images/Admin_Active_20.png",
+    "inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_20_m.png",
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      "河本 結",
+      "菊地 絵理香",
+      "岸部 桃子"
+    ],
+    "display_strings": [
+      130,
+      0,
+      "山城 奈々",
+      3
+    ],
+    "player_group_no1": 15,
+    "player_group_no2": 3,
+    "player_group_no3": 13,
+    "player_disp_mode": 0,
+    "hole_link_mode": 0,
+    "xcoordinate": -412,
+    "ycoordinate": -483
   }
 ]
