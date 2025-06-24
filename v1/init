@@ -3,6 +3,8 @@
   "camera_num": 30,
   "refresh_time": 5,
   "web_button": 1,
-  "web_button_url": "https://example.com",
-  "web_url": ""
+  "web_button_url": "https://assets.emc-api.com/images/button.png",
+  "web_url": "https://www.lpga.or.jp/tournament/jlpgatour/2025/2130/info",
+  "camera_blank_active_icon_url": "https://assets.emc-api.com/images/Admin_Active_0.png",
+  "camera_blank_inactive_icon_url": "https://assets.emc-api.com/images/Admin_Inactive_0.png"
 }

@@ -1,153 +1,2157 @@
 [
   {
     "player_group_no": 1,
-    "xcoordinate": 3210,
-    "ycoordinate": 1300,
+    "xcoordinate": -326,
+    "ycoordinate": -692,
     "active": 1,
     "hole": [
       {
-        "hole_no": 4,
-        "hole_name": "4H",
-        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_4H.png",
-        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_4H.png",
-        "hole_info_image_url": "https://assets.emc-api.com/images/0607/test_4.PNG"
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
       }
     ],
     "players": [
       {
-        "active": 1,
-        "name": "スタブ選手2",
-        "name_en": "test player2",
-        "rank": 1,
-        "score": 10
+        "active": 0,
+        "name": "勝亦 悠斗",
+        "name_en": "Yuto Katsumata",
+        "rank": 23,
+        "tie": 1,
+        "score": 0
       },
       {
         "active": 0,
-        "name": "スタブ選手3",
-        "name_en": "test player3",
-        "rank": 7,
-        "score": 50
+        "name": "高  君宅",
+        "name_en": "Guntaek Koh",
+        "rank": 42,
+        "tie": 1,
+        "score": 1
       },
       {
         "active": 1,
-        "name": "スタブ選手4",
-        "name_en": "test player4",
-        "rank": 20,
-        "score": 80
+        "name": "長野 泰雅",
+        "name_en": "Taiga Nagano",
+        "rank": 28,
+        "tie": 1,
+        "score": 0
       }
     ]
   },
   {
     "player_group_no": 2,
-    "xcoordinate": 3459,
-    "ycoordinate": 2188,
-    "active": 1,
+    "xcoordinate": -322,
+    "ycoordinate": -570,
+    "active": 0,
     "hole": [
       {
-        "hole_no": 5,
-        "hole_name": "5H",
-        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_5H.png",
-        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_5H.png",
-        "hole_info_image_url": "https://assets.emc-api.com/images/0607/test_5.PNG"
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
       }
     ],
     "players": [
       {
-        "active": 1,
-        "name": "スタブ選手５",
-        "name_en": "test player5",
-        "rank": 6,
-        "score": 50
+        "active": 0,
+        "name": "穴井 詩",
+        "name_en": "Lala Anai",
+        "rank": 23,
+        "tie": 1,
+        "score": -1
       },
       {
         "active": 0,
-        "name": "スタブ選手６",
-        "name_en": "test player6",
-        "rank": 2,
-        "score": 40
+        "name": "阿部 未悠",
+        "name_en": "Miyuu Abe",
+        "rank": 4,
+        "tie": 0,
+        "score": -3
       },
       {
-        "active": 1,
-        "name": "スタブ選手７",
-        "name_en": "test player7",
-        "rank": 10,
-        "score": 65
+        "active": 0,
+        "name": "天本 ハルカ",
+        "name_en": "Haruka Amamoto",
+        "rank": 5,
+        "tie": 0,
+        "score": -6
       }
     ]
   },
   {
     "player_group_no": 3,
-    "xcoordinate": 3459,
-    "ycoordinate": 2188,
+    "xcoordinate": -334,
+    "ycoordinate": -574,
     "active": 1,
     "hole": [
       {
-        "hole_no": 5,
-        "hole_name": "5H",
-        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_5H.png",
-        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_5H.png",
-        "hole_info_image_url": "https://assets.emc-api.com/images/0607/test_5.PNG"
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
       }
     ],
     "players": [
       {
         "active": 1,
-        "name": "スタブ選手8",
-        "name_en": "test player8",
+        "name": "新垣 比菜",
+        "name_en": "Hina Arakaki",
         "rank": 6,
-        "score": 50
+        "tie": 0,
+        "score": -6
       },
       {
         "active": 0,
-        "name": "スタブ選手9",
-        "name_en": "test player9",
-        "rank": 2,
-        "score": 40
+        "name": "荒川 怜郁",
+        "name_en": "Reika Arakawa",
+        "rank": 65,
+        "tie": 1,
+        "score": 2
       },
       {
         "active": 1,
-        "name": "スタブ選手10",
-        "name_en": "test player10",
-        "rank": 10,
-        "score": 65
+        "name": "アン シネ",
+        "name_en": "Shin-Ae Ahn",
+        "rank": 8,
+        "tie": 0,
+        "score": -6
       }
     ]
   },
   {
     "player_group_no": 4,
-    "xcoordinate": 3459,
-    "ycoordinate": 2188,
+    "xcoordinate": -269,
+    "ycoordinate": -623,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 8,
+        "hole_name": "8H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_8H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_8H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/8.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "李 知姫",
+        "name_en": "Ji-Hee Lee",
+        "rank": 33,
+        "tie": 1,
+        "score": 3
+      },
+      {
+        "active": 0,
+        "name": "イ ナリ",
+        "name_en": "Na-Ri Lee",
+        "rank": 47,
+        "tie": 1,
+        "score": -2
+      },
+      {
+        "active": 0,
+        "name": "イ ミニョン",
+        "name_en": "Min-Young Lee",
+        "rank": 10,
+        "tie": 1,
+        "score": -3
+      }
+    ]
+  },
+  {
+    "player_group_no": 5,
+    "xcoordinate": -295,
+    "ycoordinate": -562,
     "active": 1,
     "hole": [
       {
-        "hole_no": 5,
-        "hole_name": "5H",
-        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_5H.png",
-        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_5H.png",
-        "hole_info_image_url": "https://assets.emc-api.com/images/0607/test_5.PNG"
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
       }
     ],
     "players": [
       {
         "active": 1,
-        "name": "スタブ選手11",
-        "name_en": "test player11",
-        "rank": 6,
-        "score": 50
-      },
-      {
-        "active": 0,
-        "name": "スタブ選手12",
-        "name_en": "test player12",
-        "rank": 2,
-        "score": 40
+        "name": "石井 理緒",
+        "name_en": "Rio Ishii",
+        "rank": 12,
+        "tie": 0,
+        "score": -4
       },
       {
         "active": 1,
-        "name": "スタブ選手13",
-        "name_en": "test player13",
+        "name": "石田 可南子",
+        "name_en": "Kanako Ishida",
+        "rank": 13,
+        "tie": 0,
+        "score": 2
+      },
+      {
+        "active": 1,
+        "name": "泉田 琴菜",
+        "name_en": "Kotona Izumida",
+        "rank": 14,
+        "tie": 0,
+        "score": -5
+      }
+    ]
+  },
+  {
+    "player_group_no": 6,
+    "xcoordinate": -383,
+    "ycoordinate": -514,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "稲垣 那奈子",
+        "name_en": "Nanako Inagaki",
+        "rank": 15,
+        "tie": 0,
+        "score": 2
+      },
+      {
+        "active": 0,
+        "name": "ウー チャイェン",
+        "name_en": "Chia Yen Wu",
+        "rank": 47,
+        "tie": 1,
+        "score": 3
+      },
+      {
+        "active": 0,
+        "name": "上田 桃子",
+        "name_en": "Momoko Ueda",
+        "rank": 17,
+        "tie": 1,
+        "score": 0
+      }
+    ]
+  },
+  {
+    "player_group_no": 7,
+    "xcoordinate": -275,
+    "ycoordinate": -613,
+    "active": 1,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 1,
+        "name": "植手 桃子",
+        "name_en": "Momoko Uete",
+        "rank": 18,
+        "tie": 0,
+        "score": 1
+      },
+      {
+        "active": 1,
+        "name": "上野 菜々子",
+        "name_en": "Nanako Ueno",
+        "rank": 19,
+        "tie": 0,
+        "score": 1
+      },
+      {
+        "active": 0,
+        "name": "臼井 麗香",
+        "name_en": "Reika Usui",
+        "rank": 47,
+        "tie": 1,
+        "score": 3
+      }
+    ]
+  },
+  {
+    "player_group_no": 8,
+    "xcoordinate": -269,
+    "ycoordinate": -612,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 8,
+        "hole_name": "8H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_8H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_8H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/8.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "内田 ことこ",
+        "name_en": "Kotoko Uchida",
+        "rank": 21,
+        "tie": 0,
+        "score": 3
+      },
+      {
+        "active": 0,
+        "name": "エイミー・コガ",
+        "name_en": "Eimi Koga",
+        "rank": 22,
+        "tie": 0,
+        "score": 1
+      },
+      {
+        "active": 0,
+        "name": "江澤 亜弥",
+        "name_en": "Aya Ezawa",
+        "rank": 23,
+        "tie": 0,
+        "score": -2
+      }
+    ]
+  },
+  {
+    "player_group_no": 9,
+    "xcoordinate": -145,
+    "ycoordinate": -602,
+    "active": 1,
+    "hole": [
+      {
+        "hole_no": 8,
+        "hole_name": "8H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_8H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_8H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/8.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 1,
+        "name": "大出 瑞月",
+        "name_en": "Mizuki Ooide",
+        "rank": 24,
+        "tie": 0,
+        "score": -6
+      },
+      {
+        "active": 0,
+        "name": "大里 桃子",
+        "name_en": "Momoko Osato",
+        "rank": 17,
+        "tie": 1,
+        "score": -2
+      },
+      {
+        "active": 1,
+        "name": "大須賀 望",
+        "name_en": "Nozomi Ohsuga",
+        "rank": 26,
+        "tie": 0,
+        "score": -4
+      }
+    ]
+  },
+  {
+    "player_group_no": 10,
+    "xcoordinate": -296,
+    "ycoordinate": -550,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "大林 奈央",
+        "name_en": "Nao Obayashi",
+        "rank": 60,
+        "tie": 1,
+        "score": 5
+      },
+      {
+        "active": 0,
+        "name": "岡山 絵里",
+        "name_en": "Eri Okayama",
+        "rank": 33,
+        "tie": 1,
+        "score": 3
+      },
+      {
+        "active": 0,
+        "name": "沖 せいら",
+        "name_en": "Seira Oki",
+        "rank": 5,
+        "tie": 1,
+        "score": 1
+      }
+    ]
+  },
+  {
+    "player_group_no": 11,
+    "xcoordinate": -263,
+    "ycoordinate": -525,
+    "active": 1,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "小倉 彩愛",
+        "name_en": "Sae Ogura",
+        "rank": 71,
+        "tie": 1,
+        "score": 2
+      },
+      {
+        "active": 1,
+        "name": "尾関 彩美悠",
+        "name_en": "Amiyu Ozeki",
+        "rank": 31,
+        "tie": 0,
+        "score": 1
+      },
+      {
+        "active": 1,
+        "name": "小野 祐夢",
+        "name_en": "Hiromu Ono",
+        "rank": 32,
+        "tie": 0,
+        "score": -6
+      }
+    ]
+  },
+  {
+    "player_group_no": 12,
+    "xcoordinate": -262,
+    "ycoordinate": -587,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "柏原 明日架",
+        "name_en": "Asuka Kashiwabara",
+        "rank": 33,
+        "tie": 0,
+        "score": -7
+      },
+      {
+        "active": 0,
+        "name": "金澤 志奈",
+        "name_en": "Shina Kanazawa",
+        "rank": 54,
+        "tie": 1,
+        "score": 1
+      },
+      {
+        "active": 0,
+        "name": "金田 久美子",
+        "name_en": "Kumiko Kaneda",
+        "rank": 35,
+        "tie": 0,
+        "score": -3
+      }
+    ]
+  },
+  {
+    "player_group_no": 13,
+    "xcoordinate": -310,
+    "ycoordinate": -562,
+    "active": 1,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 1,
+        "name": "上久保 実咲",
+        "name_en": "Misaki Kamikubo",
+        "rank": 36,
+        "tie": 0,
+        "score": -7
+      },
+      {
+        "active": 0,
+        "name": "神谷 そら",
+        "name_en": "Sora Kamiya",
+        "rank": 33,
+        "tie": 1,
+        "score": -1
+      },
+      {
+        "active": 1,
+        "name": "神谷 和奏",
+        "name_en": "Wakana Kamiya",
+        "rank": 38,
+        "tie": 0,
+        "score": -7
+      }
+    ]
+  },
+  {
+    "player_group_no": 14,
+    "xcoordinate": -392,
+    "ycoordinate": -502,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "川岸 史果",
+        "name_en": "Fumika Kawagishi",
+        "rank": 76,
+        "tie": 1,
+        "score": 5
+      },
+      {
+        "active": 0,
+        "name": "川﨑 春花",
+        "name_en": "Haruka Kawasaki",
+        "rank": 38,
+        "tie": 1,
+        "score": 4
+      },
+      {
+        "active": 0,
+        "name": "河村 来未",
+        "name_en": "Kurumi Kawamura",
+        "rank": 47,
+        "tie": 1,
+        "score": -5
+      }
+    ]
+  },
+  {
+    "player_group_no": 15,
+    "xcoordinate": -338,
+    "ycoordinate": -531,
+    "active": 1,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "河本 結",
+        "name_en": "Yui Kawamoto",
         "rank": 10,
-        "score": 65
+        "tie": 1,
+        "score": -4
+      },
+      {
+        "active": 1,
+        "name": "菊地 絵理香",
+        "name_en": "Erika Kikuchi",
+        "rank": 43,
+        "tie": 0,
+        "score": -4
+      },
+      {
+        "active": 1,
+        "name": "岸部 桃子",
+        "name_en": "Momoko Kishibe",
+        "rank": 44,
+        "tie": 0,
+        "score": 1
+      }
+    ]
+  },
+  {
+    "player_group_no": 16,
+    "xcoordinate": -346,
+    "ycoordinate": -586,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "鬼頭 さくら",
+        "name_en": "Sakura Kito",
+        "rank": 45,
+        "tie": 0,
+        "score": -3
+      },
+      {
+        "active": 0,
+        "name": "木戸 愛",
+        "name_en": "Megumi Kido",
+        "rank": 46,
+        "tie": 0,
+        "score": -7
+      },
+      {
+        "active": 0,
+        "name": "木村 彩子",
+        "name_en": "Ayako Kimura",
+        "rank": 10,
+        "tie": 1,
+        "score": -4
+      }
+    ]
+  },
+  {
+    "player_group_no": 17,
+    "xcoordinate": -116,
+    "ycoordinate": -617,
+    "active": 1,
+    "hole": [
+      {
+        "hole_no": 8,
+        "hole_name": "8H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_8H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_8H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/8.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "工藤 遥加",
+        "name_en": "Haruka Kudo",
+        "rank": 10,
+        "tie": 1,
+        "score": -2
+      },
+      {
+        "active": 0,
+        "name": "桑木 志帆",
+        "name_en": "Shiho Kuwaki",
+        "rank": 23,
+        "tie": 1,
+        "score": -1
+      },
+      {
+        "active": 1,
+        "name": "小祝 さくら",
+        "name_en": "Sakura Koiwai",
+        "rank": 50,
+        "tie": 0,
+        "score": -6
+      }
+    ]
+  },
+  {
+    "player_group_no": 18,
+    "xcoordinate": -305,
+    "ycoordinate": -532,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "小滝 水音",
+        "name_en": "Mio Kotaki",
+        "rank": 51,
+        "tie": 0,
+        "score": -2
+      },
+      {
+        "active": 0,
+        "name": "小西 瑞穂",
+        "name_en": "Mizuho Konishi",
+        "rank": 52,
+        "tie": 0,
+        "score": -6
+      },
+      {
+        "active": 0,
+        "name": "小林 光希",
+        "name_en": "Mitsuki Kobayashi",
+        "rank": 23,
+        "tie": 1,
+        "score": 0
+      }
+    ]
+  },
+  {
+    "player_group_no": 19,
+    "xcoordinate": -307,
+    "ycoordinate": -574,
+    "active": 1,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "小林 夢果",
+        "name_en": "Yumeka Kobayashi",
+        "rank": 38,
+        "tie": 1,
+        "score": 3
+      },
+      {
+        "active": 1,
+        "name": "後藤 未有",
+        "name_en": "Miyu Goto",
+        "rank": 55,
+        "tie": 0,
+        "score": 2
+      },
+      {
+        "active": 0,
+        "name": "権藤 可恋",
+        "name_en": "Karen Gondo",
+        "rank": 79,
+        "tie": 1,
+        "score": 6
+      }
+    ]
+  },
+  {
+    "player_group_no": 20,
+    "xcoordinate": -298,
+    "ycoordinate": -555,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "酒井 美紀",
+        "name_en": "Miki Sakai",
+        "rank": 81,
+        "tie": 1,
+        "score": 6
+      },
+      {
+        "active": 0,
+        "name": "佐久間 朱莉",
+        "name_en": "Shuri Sakuma",
+        "rank": 58,
+        "tie": 0,
+        "score": -5
+      },
+      {
+        "active": 0,
+        "name": "櫻井 心那",
+        "name_en": "Kokona Sakurai",
+        "rank": 59,
+        "tie": 0,
+        "score": 3
+      }
+    ]
+  },
+  {
+    "player_group_no": 21,
+    "xcoordinate": -285,
+    "ycoordinate": -635,
+    "active": 1,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 8,
+        "hole_name": "8H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_8H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_8H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/8.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 1,
+        "name": "ささき しょうこ",
+        "name_en": "Shoko Sasaki",
+        "rank": 60,
+        "tie": 0,
+        "score": 0
+      },
+      {
+        "active": 1,
+        "name": "佐藤 心結",
+        "name_en": "Miyu Sato",
+        "rank": 61,
+        "tie": 0,
+        "score": -4
+      },
+      {
+        "active": 0,
+        "name": "篠崎 愛",
+        "name_en": "Mana Shinozaki",
+        "rank": 38,
+        "tie": 1,
+        "score": 0
+      }
+    ]
+  },
+  {
+    "player_group_no": 22,
+    "xcoordinate": -317,
+    "ycoordinate": -551,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "篠原 まりあ",
+        "name_en": "Maria Shinohara",
+        "rank": 63,
+        "tie": 0,
+        "score": -7
+      },
+      {
+        "active": 0,
+        "name": "新海 美優",
+        "name_en": "Miyu Shinkai",
+        "rank": 71,
+        "tie": 1,
+        "score": 4
+      },
+      {
+        "active": 0,
+        "name": "全 美貞",
+        "name_en": "Mi-Jeong Jeon",
+        "rank": 65,
+        "tie": 0,
+        "score": -6
+      }
+    ]
+  },
+  {
+    "player_group_no": 23,
+    "xcoordinate": -274,
+    "ycoordinate": -537,
+    "active": 1,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 1,
+        "name": "須江 唯加",
+        "name_en": "Yuika Sue",
+        "rank": 66,
+        "tie": 0,
+        "score": 1
+      },
+      {
+        "active": 0,
+        "name": "菅 楓華",
+        "name_en": "Fuka Suga",
+        "rank": 60,
+        "tie": 1,
+        "score": -1
+      },
+      {
+        "active": 0,
+        "name": "菅沼 菜々",
+        "name_en": "Nana Suganuma",
+        "rank": 70,
+        "tie": 0,
+        "score": 4
+      }
+    ]
+  },
+  {
+    "player_group_no": 24,
+    "xcoordinate": -257,
+    "ycoordinate": -560,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "鈴木 愛",
+        "name_en": "Ai Suzuki",
+        "rank": 5,
+        "tie": 1,
+        "score": -4
+      },
+      {
+        "active": 0,
+        "name": "高木 萌衣",
+        "name_en": "Mei Takagi",
+        "rank": 71,
+        "tie": 1,
+        "score": 3
+      },
+      {
+        "active": 0,
+        "name": "髙木 優奈",
+        "name_en": "Yuna Takagi",
+        "rank": 23,
+        "tie": 1,
+        "score": -1
+      }
+    ]
+  },
+  {
+    "player_group_no": 25,
+    "xcoordinate": -332,
+    "ycoordinate": -563,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "髙久 みなみ",
+        "name_en": "Minami Takaku",
+        "rank": 72,
+        "tie": 0,
+        "score": 0
+      },
+      {
+        "active": 0,
+        "name": "髙野 愛姫",
+        "name_en": "Aihi Takano",
+        "rank": 73,
+        "tie": 0,
+        "score": 2
+      },
+      {
+        "active": 0,
+        "name": "高野 あかり",
+        "name_en": "Akari Takano",
+        "rank": 74,
+        "tie": 0,
+        "score": -4
+      }
+    ]
+  },
+  {
+    "player_group_no": 26,
+    "xcoordinate": -328,
+    "ycoordinate": -597,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "高橋 彩華",
+        "name_en": "Sayaka Takahashi",
+        "rank": 3,
+        "tie": 0,
+        "score": -2
+      },
+      {
+        "active": 0,
+        "name": "竹内 美雪",
+        "name_en": "Miyuki Takeuchi",
+        "rank": 38,
+        "tie": 1,
+        "score": 0
+      },
+      {
+        "active": 0,
+        "name": "武尾 咲希",
+        "name_en": "Saki Takeo",
+        "rank": 77,
+        "tie": 0,
+        "score": 1
+      }
+    ]
+  },
+  {
+    "player_group_no": 27,
+    "xcoordinate": -288,
+    "ycoordinate": -581,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "田辺 ひかり",
+        "name_en": "Hikari Tanabe",
+        "rank": 78,
+        "tie": 0,
+        "score": -5
+      },
+      {
+        "active": 0,
+        "name": "種子田 香夏",
+        "name_en": "Kana Taneda",
+        "rank": 79,
+        "tie": 0,
+        "score": 2
+      },
+      {
+        "active": 0,
+        "name": "千葉 華",
+        "name_en": "Hana Chiba",
+        "rank": 80,
+        "tie": 0,
+        "score": 0
+      }
+    ]
+  },
+  {
+    "player_group_no": 28,
+    "xcoordinate": -187,
+    "ycoordinate": -536,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "辻 梨恵",
+        "name_en": "Rie Tsuji",
+        "rank": 65,
+        "tie": 1,
+        "score": 0
+      },
+      {
+        "active": 0,
+        "name": "鶴岡 果恋",
+        "name_en": "Karen Tsuruoka",
+        "rank": 23,
+        "tie": 1,
+        "score": -1
+      },
+      {
+        "active": 0,
+        "name": "照山 亜寿美",
+        "name_en": "Asumi Teruyama",
+        "rank": 83,
+        "tie": 0,
+        "score": -1
+      }
+    ]
+  },
+  {
+    "player_group_no": 29,
+    "xcoordinate": -282,
+    "ycoordinate": -524,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "豊永 志帆",
+        "name_en": "Shiho Toyonaga",
+        "rank": 84,
+        "tie": 0,
+        "score": 1
+      },
+      {
+        "active": 0,
+        "name": "仲宗根 澄香",
+        "name_en": "Sumika Nakasone",
+        "rank": 85,
+        "tie": 0,
+        "score": 2
+      },
+      {
+        "active": 0,
+        "name": "仲村 果乃",
+        "name_en": "Kano Nakamura",
+        "rank": 86,
+        "tie": 0,
+        "score": -1
+      }
+    ]
+  },
+  {
+    "player_group_no": 30,
+    "xcoordinate": -306,
+    "ycoordinate": -577,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "中山 三奈",
+        "name_en": "Mina Nakayama",
+        "rank": 87,
+        "tie": 0,
+        "score": -4
+      },
+      {
+        "active": 0,
+        "name": "永井 花奈",
+        "name_en": "Kana Nagai",
+        "rank": 30,
+        "tie": 1,
+        "score": -3
+      },
+      {
+        "active": 0,
+        "name": "永嶋 花音",
+        "name_en": "Hanane Nagashima",
+        "rank": 54,
+        "tie": 1,
+        "score": 1
+      }
+    ]
+  },
+  {
+    "player_group_no": 31,
+    "xcoordinate": -320,
+    "ycoordinate": -625,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "永峰 咲希",
+        "name_en": "Saki Nagamine",
+        "rank": 54,
+        "tie": 1,
+        "score": 3
+      },
+      {
+        "active": 0,
+        "name": "成田 美寿々",
+        "name_en": "Misuzu Narita",
+        "rank": 91,
+        "tie": 0,
+        "score": 0
+      },
+      {
+        "active": 0,
+        "name": "仁井 優花",
+        "name_en": "Yuka Nii",
+        "rank": 38,
+        "tie": 1,
+        "score": 2
+      }
+    ]
+  },
+  {
+    "player_group_no": 32,
+    "xcoordinate": -355,
+    "ycoordinate": -556,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "西山 ゆかり",
+        "name_en": "Yukari Nishiyama",
+        "rank": 93,
+        "tie": 0,
+        "score": 3
+      },
+      {
+        "active": 0,
+        "name": "野澤 真央",
+        "name_en": "Mao Nozawa",
+        "rank": 10,
+        "tie": 1,
+        "score": -1
+      },
+      {
+        "active": 0,
+        "name": "橋添 穂",
+        "name_en": "Minori Hashizoe",
+        "rank": 95,
+        "tie": 0,
+        "score": 2
+      }
+    ]
+  },
+  {
+    "player_group_no": 33,
+    "xcoordinate": -310,
+    "ycoordinate": -540,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "浜崎 未来",
+        "name_en": "Mirai Hamasaki",
+        "rank": 65,
+        "tie": 1,
+        "score": 1
+      },
+      {
+        "active": 0,
+        "name": "濱田 茉優",
+        "name_en": "Mayu Hamada",
+        "rank": 10,
+        "tie": 1,
+        "score": -1
+      },
+      {
+        "active": 0,
+        "name": "林 菜乃子",
+        "name_en": "Nanoko Hayashi",
+        "rank": 98,
+        "tie": 0,
+        "score": -4
+      }
+    ]
+  },
+  {
+    "player_group_no": 34,
+    "xcoordinate": -264,
+    "ycoordinate": -746,
+    "active": 0,
+    "hole": [],
+    "players": [
+      {
+        "active": 0,
+        "name": "原 英莉花",
+        "name_en": "Erika Hara",
+        "rank": 17,
+        "tie": 1,
+        "score": -3
+      },
+      {
+        "active": 0,
+        "name": "原 江里菜",
+        "name_en": "Erina Hara",
+        "rank": 100,
+        "tie": 0,
+        "score": -7
+      },
+      {
+        "active": 0,
+        "name": "比嘉 真美子",
+        "name_en": "Mamiko Higa",
+        "rank": 101,
+        "tie": 0,
+        "score": 0
+      }
+    ]
+  },
+  {
+    "player_group_no": 35,
+    "xcoordinate": -307,
+    "ycoordinate": -565,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "平井 亜実",
+        "name_en": "Ami Hirai",
+        "rank": 102,
+        "tie": 0,
+        "score": 2
+      },
+      {
+        "active": 0,
+        "name": "蛭田 みな美",
+        "name_en": "Minami Hiruta",
+        "rank": 103,
+        "tie": 0,
+        "score": -2
+      },
+      {
+        "active": 0,
+        "name": "Ｐ．サイパン",
+        "name_en": "P Saipan",
+        "rank": 104,
+        "tie": 0,
+        "score": 2
+      }
+    ]
+  },
+  {
+    "player_group_no": 36,
+    "xcoordinate": -262,
+    "ycoordinate": -627,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 8,
+        "hole_name": "8H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_8H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_8H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/8.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "黄 アルム",
+        "name_en": "Au-Reum Hwang",
+        "rank": 33,
+        "tie": 1,
+        "score": -4
+      },
+      {
+        "active": 0,
+        "name": "福田 真未",
+        "name_en": "Mami Fukuda",
+        "rank": 38,
+        "tie": 1,
+        "score": 1
+      },
+      {
+        "active": 0,
+        "name": "福山 恵梨",
+        "name_en": "Eri Fukuyama",
+        "rank": 107,
+        "tie": 0,
+        "score": -1
+      }
+    ]
+  },
+  {
+    "player_group_no": 37,
+    "xcoordinate": -291,
+    "ycoordinate": -582,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "藤田 かれん",
+        "name_en": "Karen Fujita",
+        "rank": 108,
+        "tie": 0,
+        "score": 0
+      },
+      {
+        "active": 0,
+        "name": "藤田 さいき",
+        "name_en": "Saiki Fujita",
+        "rank": 109,
+        "tie": 0,
+        "score": -3
+      },
+      {
+        "active": 0,
+        "name": "不動 裕理",
+        "name_en": "Yuri Fudoh",
+        "rank": 30,
+        "tie": 1,
+        "score": 2
+      }
+    ]
+  },
+  {
+    "player_group_no": 38,
+    "xcoordinate": -178,
+    "ycoordinate": -576,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 8,
+        "hole_name": "8H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_8H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_8H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/8.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "ベイブ・リュウ",
+        "name_en": "Babe Liu",
+        "rank": 111,
+        "tie": 0,
+        "score": -4
+      },
+      {
+        "active": 0,
+        "name": "ペ ソンウ",
+        "name_en": "Seonwoo Bae",
+        "rank": 112,
+        "tie": 0,
+        "score": -4
+      },
+      {
+        "active": 0,
+        "name": "堀 琴音",
+        "name_en": "Kotone Hori",
+        "rank": 38,
+        "tie": 1,
+        "score": 2
+      }
+    ]
+  },
+  {
+    "player_group_no": 39,
+    "xcoordinate": -364,
+    "ycoordinate": -525,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "堀 奈津佳",
+        "name_en": "Natsuka Hori",
+        "rank": 114,
+        "tie": 0,
+        "score": -3
+      },
+      {
+        "active": 0,
+        "name": "前田 陽子",
+        "name_en": "Yoko Maeda",
+        "rank": 115,
+        "tie": 0,
+        "score": 1
+      },
+      {
+        "active": 0,
+        "name": "政田 夢乃",
+        "name_en": "Yumeno Masada",
+        "rank": 71,
+        "tie": 1,
+        "score": 3
+      }
+    ]
+  },
+  {
+    "player_group_no": 40,
+    "xcoordinate": -318,
+    "ycoordinate": -513,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "三ヶ島 かな",
+        "name_en": "Kana Mikashima",
+        "rank": 117,
+        "tie": 0,
+        "score": -3
+      },
+      {
+        "active": 0,
+        "name": "皆吉 愛寿香",
+        "name_en": "Asuka Minayoshi",
+        "rank": 118,
+        "tie": 0,
+        "score": 2
+      },
+      {
+        "active": 0,
+        "name": "宮里 美香",
+        "name_en": "Mika Miyazato",
+        "rank": 119,
+        "tie": 0,
+        "score": -4
+      }
+    ]
+  },
+  {
+    "player_group_no": 41,
+    "xcoordinate": -331,
+    "ycoordinate": -531,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "宮澤 美咲",
+        "name_en": "Misaki Miyazawa",
+        "rank": 65,
+        "tie": 1,
+        "score": 0
+      },
+      {
+        "active": 0,
+        "name": "宮田 成華",
+        "name_en": "Naruha Miyata",
+        "rank": 21,
+        "tie": 1,
+        "score": -3
+      },
+      {
+        "active": 0,
+        "name": "村上 瑞希",
+        "name_en": "Mizuki Murakami",
+        "rank": 122,
+        "tie": 0,
+        "score": -3
+      }
+    ]
+  },
+  {
+    "player_group_no": 42,
+    "xcoordinate": -300,
+    "ycoordinate": -484,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "村田 歩香",
+        "name_en": "Ayuka Murata",
+        "rank": 123,
+        "tie": 0,
+        "score": -5
+      },
+      {
+        "active": 0,
+        "name": "村田 理沙",
+        "name_en": "Risa Murata",
+        "rank": 47,
+        "tie": 1,
+        "score": 2
+      },
+      {
+        "active": 0,
+        "name": "森井 あやめ",
+        "name_en": "Ayame Morii",
+        "rank": 125,
+        "tie": 0,
+        "score": -4
+      }
+    ]
+  },
+  {
+    "player_group_no": 43,
+    "xcoordinate": -327,
+    "ycoordinate": -567,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "森田 遥",
+        "name_en": "Haruka Morita",
+        "rank": 71,
+        "tie": 1,
+        "score": 7
+      },
+      {
+        "active": 0,
+        "name": "安田 祐香",
+        "name_en": "Yuka Yasuda",
+        "rank": 2,
+        "tie": 0,
+        "score": -5
+      },
+      {
+        "active": 0,
+        "name": "薮田 梨花",
+        "name_en": "Rika Yabuta",
+        "rank": 81,
+        "tie": 1,
+        "score": 8
+      }
+    ]
+  },
+  {
+    "player_group_no": 44,
+    "xcoordinate": -296,
+    "ycoordinate": -598,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "山内 日菜子",
+        "name_en": "Hinaco Yamauchi ",
+        "rank": 129,
+        "tie": 0,
+        "score": -7
+      },
+      {
+        "active": 0,
+        "name": "山城 奈々",
+        "name_en": "Nana Yamashiro",
+        "rank": 130,
+        "tie": 0,
+        "score": 3
+      },
+      {
+        "active": 0,
+        "name": "山路 晶",
+        "name_en": "Akira Yamaji",
+        "rank": 131,
+        "tie": 0,
+        "score": 3
+      }
+    ]
+  },
+  {
+    "player_group_no": 45,
+    "xcoordinate": -270,
+    "ycoordinate": -591,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "山田 彩歩",
+        "name_en": "Saho Yamada",
+        "rank": 132,
+        "tie": 0,
+        "score": 0
+      },
+      {
+        "active": 0,
+        "name": "横峯 さくら",
+        "name_en": "Sakura Yokomine",
+        "rank": 133,
+        "tie": 0,
+        "score": 3
+      },
+      {
+        "active": 0,
+        "name": "與語 優奈",
+        "name_en": "Yuina Yogo",
+        "rank": 134,
+        "tie": 0,
+        "score": 3
+      }
+    ]
+  },
+  {
+    "player_group_no": 46,
+    "xcoordinate": -335,
+    "ycoordinate": -571,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "吉澤 柚月",
+        "name_en": "Yuzuki Yoshizawa",
+        "rank": 135,
+        "tie": 0,
+        "score": -3
+      },
+      {
+        "active": 0,
+        "name": "吉田 弓美子",
+        "name_en": "Yumiko Yoshida",
+        "rank": 136,
+        "tie": 0,
+        "score": 1
+      },
+      {
+        "active": 0,
+        "name": "葭葉 ルミ",
+        "name_en": "Rumi Yoshiba",
+        "rank": 60,
+        "tie": 1,
+        "score": 1
+      }
+    ]
+  },
+  {
+    "player_group_no": 47,
+    "xcoordinate": -303,
+    "ycoordinate": -562,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "吉本 ここね",
+        "name_en": "Kokone Yoshimoto",
+        "rank": 138,
+        "tie": 0,
+        "score": -5
+      },
+      {
+        "active": 0,
+        "name": "吉本 ひかる",
+        "name_en": "Hikaru Yoshimoto",
+        "rank": 139,
+        "tie": 0,
+        "score": 2
+      },
+      {
+        "active": 0,
+        "name": "リ ハナ",
+        "name_en": "Hana Lee",
+        "rank": 7,
+        "tie": 1,
+        "score": 1
+      }
+    ]
+  },
+  {
+    "player_group_no": 48,
+    "xcoordinate": -312,
+    "ycoordinate": -563,
+    "active": 0,
+    "hole": [
+      {
+        "hole_no": 1,
+        "hole_name": "1H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
+      },
+      {
+        "hole_no": 9,
+        "hole_name": "9H",
+        "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+        "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+        "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+      }
+    ],
+    "players": [
+      {
+        "active": 0,
+        "name": "笠 りつ子",
+        "name_en": "Ritsuko Ryu",
+        "rank": 54,
+        "tie": 1,
+        "score": 4
+      },
+      {
+        "active": 0,
+        "name": "脇元 華",
+        "name_en": "Hana Wakimoto",
+        "rank": 38,
+        "tie": 1,
+        "score": 0
+      },
+      {
+        "active": 0,
+        "name": "渡邉 彩香",
+        "name_en": "Ayaka Watanabe",
+        "rank": 54,
+        "tie": 1,
+        "score": 2
       }
     ]
   }

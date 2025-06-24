@@ -4,27 +4,125 @@
     "hole_name": "1H",
     "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_1H.png",
     "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_1H_m.png",
-    "hole_info_image_url": ""
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/1.PNG"
   },
   {
     "hole_no": 2,
     "hole_name": "2H",
     "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_2H.png",
     "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_2H_m.png",
-    "hole_info_image_url": "https://assets.emc-api.com/images/0607/test_2.PNG"
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/2.PNG"
   },
   {
     "hole_no": 3,
     "hole_name": "3H",
     "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_3H.png",
     "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_3H_m.png",
-    "hole_info_image_url": ""
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/3.PNG"
   },
   {
     "hole_no": 4,
     "hole_name": "4H",
     "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_4H.png",
     "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_4H_m.png",
-    "hole_info_image_url": ""
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/4.PNG"
+  },
+  {
+    "hole_no": 5,
+    "hole_name": "5H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_5H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_5H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/5.PNG"
+  },
+  {
+    "hole_no": 6,
+    "hole_name": "6H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_6H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_6H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/6.PNG"
+  },
+  {
+    "hole_no": 7,
+    "hole_name": "7H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_7H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_7H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/7.PNG"
+  },
+  {
+    "hole_no": 8,
+    "hole_name": "8H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_8H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_8H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/8.PNG"
+  },
+  {
+    "hole_no": 9,
+    "hole_name": "9H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_9H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_9H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/9.PNG"
+  },
+  {
+    "hole_no": 10,
+    "hole_name": "10H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_10H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_10H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/10.PNG"
+  },
+  {
+    "hole_no": 11,
+    "hole_name": "11H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_11H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_11H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/11.PNG"
+  },
+  {
+    "hole_no": 12,
+    "hole_name": "12H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_12H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_12H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/12.PNG"
+  },
+  {
+    "hole_no": 13,
+    "hole_name": "13H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_13H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_13H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/13.PNG"
+  },
+  {
+    "hole_no": 14,
+    "hole_name": "14H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_14H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_14H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/14.PNG"
+  },
+  {
+    "hole_no": 15,
+    "hole_name": "15H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_15H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_15H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/15.PNG"
+  },
+  {
+    "hole_no": 16,
+    "hole_name": "16H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_16H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_16H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/16.PNG"
+  },
+  {
+    "hole_no": 17,
+    "hole_name": "17H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_17H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_17H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/17.PNG"
+  },
+  {
+    "hole_no": 18,
+    "hole_name": "18H",
+    "hole_icon_active_image_url": "https://assets.emc-api.com/images/User_Active_18H.png",
+    "hole_icon_inactive_image_url": "https://assets.emc-api.com/images/User_Inactive_18H_m.png",
+    "hole_info_image_url": "https://assets.emc-api.com/images/0620/18.PNG"
   }
 ]
