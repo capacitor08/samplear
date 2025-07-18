@@ -1,0 +1,49 @@
+{
+  "refresh_rate": 300,
+  "getting_started": "https://stg-web.basketlive.jp/service/tv/firetv/consent.html",
+  "play_log_url": "https://stg-track.basketlive.jp/v1/playlog",
+  "menu_title": "サービスについて",
+  "playcheck_cache_seconds": 600,
+  "menu_urls": [
+    {
+      "title": "利用規約",
+      "url": "https://stn.mb.softbank.jp/X5X6e"
+    },
+    {
+      "title": "よくある質問",
+      "url": "https://stg-web.basketlive.jp/service/faq/"
+    },
+    {
+      "title": "ライセンス",
+      "url": "https://stg-web.basketlive.jp/service/tv/firetv/license.html"
+    }
+  ],
+  "menu_name": [
+    {
+      "feature_id": "3126",
+      "title": "ウインターカップ"
+    },
+    {
+      "feature_id": "3129",
+      "title": "Wリーグ"
+    },
+    {
+      "feature_id": "3119",
+      "title": "NBL"
+    },
+    {
+      "feature_id": "3118",
+      "title": "Japan National"
+    },
+    {
+      "feature_id": "3116",
+      "title": "U15"
+    }
+  ],
+  "API_base_url": "https://stg-api.basketlive.jp/api/",
+  "live_base_url": "https://basketlive-live-sni.akamaized.net/live/",
+  "maintenance_mode": false,
+  "force_upgrade_version": "1.0.20",
+  "sbcode_expires_in": 900,
+  "sblogin_polling": 5
+}
