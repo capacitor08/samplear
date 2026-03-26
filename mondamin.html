@@ -357,7 +357,7 @@
     const ACTUAL_IMAGE_NAME = "mondamin_map.png";
     const IMAGE_WIDTH = 2048;
     const IMAGE_HEIGHT = 1280;
-    const MIN_ZOOM = 0.5;
+    const MIN_ZOOM = 0.2;
     const MAX_ZOOM = 5;
     const ZOOM_STEP = 0.25;
 
@@ -414,12 +414,27 @@
       return markers.find(m => m.id === selectedId) || null;
     }
 
+    function getFitZoom() {
+      const availableWidth = viewport.clientWidth || 1;
+      const availableHeight = viewport.clientHeight || 1;
+      const scaleX = availableWidth / IMAGE_WIDTH;
+      const scaleY = availableHeight / IMAGE_HEIGHT;
+      return Math.min(scaleX, scaleY);
+    }
+
     function updateStageSize() {
       stage.style.width = (IMAGE_WIDTH * zoom) + "px";
       stage.style.height = (IMAGE_HEIGHT * zoom) + "px";
       mapImage.style.width = (IMAGE_WIDTH * zoom) + "px";
       mapImage.style.height = (IMAGE_HEIGHT * zoom) + "px";
       zoomValue.textContent = Math.round(zoom * 100) + "%";
+    }
+
+    function centerViewport() {
+      const contentWidth = IMAGE_WIDTH * zoom;
+      const contentHeight = IMAGE_HEIGHT * zoom;
+      viewport.scrollLeft = Math.max(0, (contentWidth - viewport.clientWidth) / 2);
+      viewport.scrollTop = Math.max(0, (contentHeight - viewport.clientHeight) / 2);
     }
 
     function renderMarkers() {
@@ -575,9 +590,29 @@
       setStatus(`Loaded ${loadedMarkers.length} marker(s) from JSON.`);
     }
 
-    function zoomTo(nextZoom) {
-      zoom = clamp(Number(nextZoom.toFixed(2)), MIN_ZOOM, MAX_ZOOM);
+    function zoomTo(nextZoom, keepCenter = true) {
+      const prevZoom = zoom;
+      const targetZoom = clamp(Number(nextZoom.toFixed(2)), MIN_ZOOM, MAX_ZOOM);
+      if (targetZoom === prevZoom) return;
+
+      const centerX = viewport.scrollLeft + viewport.clientWidth / 2;
+      const centerY = viewport.scrollTop + viewport.clientHeight / 2;
+      const imageX = centerX / prevZoom;
+      const imageY = centerY / prevZoom;
+
+      zoom = targetZoom;
       renderAll();
+
+      if (keepCenter) {
+        viewport.scrollLeft = imageX * zoom - viewport.clientWidth / 2;
+        viewport.scrollTop = imageY * zoom - viewport.clientHeight / 2;
+      }
+    }
+
+    function resetToFit() {
+      zoom = clamp(Number(getFitZoom().toFixed(4)), MIN_ZOOM, MAX_ZOOM);
+      renderAll();
+      centerViewport();
     }
 
     function handleMapClick(e) {
@@ -608,7 +643,7 @@
 
     document.getElementById("zoomInBtn").addEventListener("click", () => zoomTo(zoom + ZOOM_STEP));
     document.getElementById("zoomOutBtn").addEventListener("click", () => zoomTo(zoom - ZOOM_STEP));
-    document.getElementById("resetBtn").addEventListener("click", () => zoomTo(1));
+    document.getElementById("resetBtn").addEventListener("click", () => resetToFit());
     exportBtn.addEventListener("click", exportMarkers);
 
     loadBtn.addEventListener("click", () => loadInput.click());
@@ -679,6 +714,7 @@
     }, { passive: false });
 
     viewport.addEventListener("mousedown", (e) => {
+      if (e.button !== 0) return;
       isDragging = true;
       dragMoved = false;
       dragStartX = e.clientX;
@@ -686,6 +722,7 @@
       startScrollLeft = viewport.scrollLeft;
       startScrollTop = viewport.scrollTop;
       viewport.classList.add("dragging");
+      e.preventDefault();
     });
 
     window.addEventListener("mousemove", (e) => {
@@ -717,7 +754,18 @@
     xInput.value = 200;
     yInput.value = 200;
 
-    renderAll();
+    window.addEventListener("resize", () => {
+      const fitZoom = clamp(Number(getFitZoom().toFixed(4)), MIN_ZOOM, MAX_ZOOM);
+      if (zoom < fitZoom) {
+        zoom = fitZoom;
+        renderAll();
+      }
+    });
+
+    requestAnimationFrame(() => {
+      resetToFit();
+    });
   </script>
 </body>
 </html>
+
