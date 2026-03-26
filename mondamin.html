@@ -360,12 +360,15 @@
     const MIN_ZOOM = 0.2;
     const MAX_ZOOM = 5;
     const ZOOM_STEP = 0.25;
+    const MARKERS_API_URL = "https://capacitor08.github.io/samplear/api/markers_xy.json";
+    const REFRESH_MS = 5000;
 
     let zoom = 1;
     let fitZoom = 1;
     let markers = [];
     let selectedId = null;
     let isDragging = false;
+    let refreshTimer = null;
     let dragMoved = false;
     let dragStartX = 0;
     let dragStartY = 0;
@@ -595,6 +598,38 @@
       setStatus(`Loaded ${loadedMarkers.length} marker(s) from JSON.`);
     }
 
+    async function fetchMarkersFromApi() {
+      try {
+        const response = await fetch(MARKERS_API_URL, { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const parsed = await response.json();
+        const loadedMarkers = normalizeLoadedMarkers(parsed.markers);
+        const previousSelectedId = selectedId;
+
+        markers = loadedMarkers;
+        selectedId = loadedMarkers.some(m => m.id === previousSelectedId)
+          ? previousSelectedId
+          : (loadedMarkers.length ? loadedMarkers[0].id : null);
+
+        renderAll();
+        setStatus(`Auto-refreshed ${loadedMarkers.length} marker(s) from server.`);
+      } catch (error) {
+        setStatus(`Failed to refresh markers from server: ${error.message}`, true);
+      }
+    }
+
+    function startApiRefresh() {
+      if (refreshTimer) {
+        clearInterval(refreshTimer);
+      }
+
+      fetchMarkersFromApi();
+      refreshTimer = setInterval(fetchMarkersFromApi, REFRESH_MS);
+    }
+
     function zoomTo(nextZoom, keepCenter = true) {
       const prevZoom = zoom;
       const minAllowedZoom = getMinAllowedZoom();
@@ -637,7 +672,7 @@
         y: Math.round(y),
         description: ""
       });
-      setStatus("Marker added.");
+      setStatus("Marker added locally. Server refresh may overwrite local markers.");
     }
 
     function escapeHtml(value) {
@@ -689,7 +724,7 @@
       xInput.value = 200;
       yInput.value = 200;
       descInput.value = "";
-      setStatus("Marker added.");
+      setStatus("Marker added locally. Server refresh may overwrite local markers.");
     });
 
     editLabelInput.addEventListener("input", () => {
@@ -777,8 +812,16 @@
       zoom = fitZoom;
       renderAll();
       centerViewport();
+      startApiRefresh();
+    });
+
+    window.addEventListener("beforeunload", () => {
+      if (refreshTimer) {
+        clearInterval(refreshTimer);
+      }
     });
   </script>
 </body>
 </html>
+
 
