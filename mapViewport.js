@@ -35,10 +35,14 @@
     }
 
     function updateStage() {
-      stage.style.width = (imageWidth * zoom) + "px";
-      stage.style.height = (imageHeight * zoom) + "px";
-      mapImage.style.width = (imageWidth * zoom) + "px";
-      mapImage.style.height = (imageHeight * zoom) + "px";
+      stage.style.width = imageWidth + "px";
+      stage.style.height = imageHeight + "px";
+
+      mapImage.style.width = imageWidth + "px";
+      mapImage.style.height = imageHeight + "px";
+
+      stage.style.transform = `scale(${zoom})`;
+
       onZoomChange(zoom);
     }
 
