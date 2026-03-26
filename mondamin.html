@@ -286,6 +286,11 @@
 
     mapImage.src = ACTUAL_IMAGE_SRC;
 
+    viewport.addEventListener("dblclick", (e) => {
+      e.preventDefault();
+      resetToFit();
+    });
+
     window.addEventListener("resize", () => {
       fitZoom = Math.max(MIN_ZOOM, Number(getFitZoom().toFixed(4)));
 
