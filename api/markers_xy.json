@@ -44,6 +44,13 @@
       "x": 1200,
       "y": 500,
       "description": ""
+    },
+    {
+      "id": "mvrcjbod",
+      "label": "Marker 7",
+      "x": 1200,
+      "y": 900,
+      "description": ""
     }
   ]
 }
