@@ -353,15 +353,16 @@
   </div>
 
   <script>
-    const ACTUAL_IMAGE_SRC = "mondamin_map.png";
-    const ACTUAL_IMAGE_NAME = "mondamin_map.png";
+    const ACTUAL_IMAGE_SRC = "/mnt/data/NEW-724_map2025_v3 copy.png";
+    const ACTUAL_IMAGE_NAME = "NEW-724_map2025_v3 copy.png";
     const IMAGE_WIDTH = 2048;
     const IMAGE_HEIGHT = 1280;
-    const MIN_ZOOM = 0.2;
+    const MIN_ZOOM = 1;
     const MAX_ZOOM = 5;
     const ZOOM_STEP = 0.25;
 
     let zoom = 1;
+    let fitZoom = 1;
     let markers = [];
     let selectedId = null;
     let isDragging = false;
@@ -420,6 +421,10 @@
       const scaleX = availableWidth / IMAGE_WIDTH;
       const scaleY = availableHeight / IMAGE_HEIGHT;
       return Math.min(scaleX, scaleY);
+    }
+
+    function getMinAllowedZoom() {
+      return fitZoom;
     }
 
     function updateStageSize() {
@@ -592,7 +597,8 @@
 
     function zoomTo(nextZoom, keepCenter = true) {
       const prevZoom = zoom;
-      const targetZoom = clamp(Number(nextZoom.toFixed(2)), MIN_ZOOM, MAX_ZOOM);
+      const minAllowedZoom = getMinAllowedZoom();
+      const targetZoom = clamp(Number(nextZoom.toFixed(2)), minAllowedZoom, MAX_ZOOM);
       if (targetZoom === prevZoom) return;
 
       const centerX = viewport.scrollLeft + viewport.clientWidth / 2;
@@ -601,6 +607,7 @@
       const imageY = centerY / prevZoom;
 
       zoom = targetZoom;
+      
       renderAll();
 
       if (keepCenter) {
@@ -610,7 +617,8 @@
     }
 
     function resetToFit() {
-      zoom = clamp(Number(getFitZoom().toFixed(4)), MIN_ZOOM, MAX_ZOOM);
+      fitZoom = Math.max(MIN_ZOOM, Number(getFitZoom().toFixed(4)));
+      zoom = fitZoom;
       renderAll();
       centerViewport();
     }
@@ -755,17 +763,21 @@
     yInput.value = 200;
 
     window.addEventListener("resize", () => {
-      const fitZoom = clamp(Number(getFitZoom().toFixed(4)), MIN_ZOOM, MAX_ZOOM);
+      fitZoom = Math.max(MIN_ZOOM, Number(getFitZoom().toFixed(4)));
+
       if (zoom < fitZoom) {
         zoom = fitZoom;
         renderAll();
+        centerViewport();
       }
     });
 
     requestAnimationFrame(() => {
-      resetToFit();
+      fitZoom = Math.max(MIN_ZOOM, Number(getFitZoom().toFixed(4)));
+      zoom = fitZoom;
+      renderAll();
+      centerViewport();
     });
   </script>
 </body>
 </html>
-
