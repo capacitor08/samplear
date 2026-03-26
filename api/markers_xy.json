@@ -1,0 +1,35 @@
+{
+  "imageName": "mondamin_map.png",
+  "imageWidth": 2048,
+  "imageHeight": 1280,
+  "markers": [
+    {
+      "id": "hsov6gpq",
+      "label": "Marker 1",
+      "x": 814,
+      "y": 539,
+      "description": ""
+    },
+    {
+      "id": "kjgdyt39",
+      "label": "Marker 2",
+      "x": 675,
+      "y": 479,
+      "description": ""
+    },
+    {
+      "id": "neziy5x0",
+      "label": "Marker 3",
+      "x": 520,
+      "y": 530,
+      "description": ""
+    },
+    {
+      "id": "mvrcjbod",
+      "label": "Marker 4",
+      "x": 409,
+      "y": 370,
+      "description": ""
+    }
+  ]
+}
