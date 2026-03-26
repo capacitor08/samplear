@@ -1,124 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Map Marker App</title>
+<meta charset="UTF-8">
+<title>Map Marker</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: #f3f4f6;
-    }
+<style>
+body { margin:0; font-family:Arial; }
 
-    .container {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      height: 100vh;
-      gap: 10px;
-      padding: 10px;
-    }
+.container {
+  display:flex;
+  height:100vh;
+}
 
-    .map-panel {
-      background: white;
-      border-radius: 10px;
-      padding: 10px;
-    }
+.map {
+  flex:2;
+  padding:10px;
+}
 
-    .viewport {
-      height: 85vh;
-      overflow: auto;
-      border: 1px solid #ccc;
-      cursor: grab;
-    }
+.side {
+  flex:1;
+  padding:10px;
+  background:#f3f4f6;
+}
 
-    .viewport.dragging {
-      cursor: grabbing;
-    }
+.viewport {
+  height:85vh;
+  overflow:auto;
+  border:1px solid #ccc;
+  cursor:grab;
+}
 
-    .stage {
-      position: relative;
-    }
+.viewport.dragging { cursor:grabbing; }
 
-    .marker {
-      position: absolute;
-      transform: translate(-50%, -100%);
-      background: red;
-      color: white;
-      font-size: 12px;
-      padding: 2px 6px;
-      border-radius: 5px;
-    }
+.stage { position:relative; }
 
-    .controls {
-      margin-bottom: 10px;
-    }
+.marker {
+  position:absolute;
+  transform:translate(-50%,-100%);
+  background:red;
+  color:white;
+  padding:2px 6px;
+  font-size:12px;
+}
+</style>
 
-    button {
-      margin-right: 5px;
-    }
-
-    .side {
-      background: white;
-      padding: 10px;
-      border-radius: 10px;
-    }
-
-  </style>
 </head>
 
 <body>
 
 <div class="container">
 
-  <!-- MAP -->
-  <div class="map-panel">
+<div class="map">
 
-    <div class="controls">
-      <button id="zoomInBtn">Zoom In</button>
-      <button id="zoomOutBtn">Zoom Out</button>
-      <button id="resetBtn">Reset</button>
-      <button id="loadBtn">Load JSON</button>
-      <button id="exportBtn">Export JSON</button>
-      <input type="file" id="loadInput" style="display:none"/>
-      <span id="zoomText"></span>
-    </div>
+<button id="zoomInBtn">+</button>
+<button id="zoomOutBtn">-</button>
+<button id="resetBtn">Reset</button>
+<button id="loadBtn">Load</button>
+<button id="exportBtn">Export</button>
+<input type="file" id="loadInput" style="display:none">
 
-    <div id="viewport" class="viewport">
-      <div id="stage" class="stage">
-        <img id="mapImage"/>
-        <div id="markersLayer"></div>
-      </div>
-    </div>
+<span id="zoomText"></span>
 
+<div id="viewport" class="viewport">
+  <div id="stage" class="stage">
+    <img id="mapImage">
+    <div id="markersLayer"></div>
   </div>
-
-  <!-- SIDE -->
-  <div class="side">
-    <h3>Markers</h3>
-    <div id="markerList"></div>
-  </div>
+</div>
 
 </div>
 
-<!-- MODULES -->
+<div class="side">
+<h3>Markers</h3>
+<div id="list"></div>
+</div>
+
+</div>
+
 <script src="markerApi.js"></script>
 <script src="markerJson.js"></script>
-<script src="mapViewport.js"></script>
 
 <script>
 
+// ================= CONFIG =================
 const IMAGE_WIDTH = 2048;
 const IMAGE_HEIGHT = 1280;
 const IMAGE_SRC = "mondamin_map.png";
-
 const API_URL = "https://capacitor08.github.io/samplear/api/markers_xy.json";
 
+// ================= STATE =================
+let zoom = 1;
+let fitZoom = 1;
 let markers = [];
-let selectedId = null;
 
-// DOM
+let isDragging = false;
+let dragStartX = 0;
+let dragStartY = 0;
+let startScrollLeft = 0;
+let startScrollTop = 0;
+let dragMoved = false;
+
+// ================= DOM =================
 const viewport = document.getElementById("viewport");
 const stage = document.getElementById("stage");
 const mapImage = document.getElementById("mapImage");
@@ -127,10 +109,7 @@ const zoomText = document.getElementById("zoomText");
 
 mapImage.src = IMAGE_SRC;
 
-// =====================
-// MODULE INIT
-// =====================
-
+// ================= MODULES =================
 const markerApi = MarkerApi.create({
   apiUrl: API_URL,
   imageWidth: IMAGE_WIDTH,
@@ -144,92 +123,156 @@ const markerJson = MarkerJson.create({
   normalizeMarkers: markerApi.normalizeMarkers
 });
 
-const mapViewport = MapViewport.create({
-  viewport,
-  stage,
-  mapImage,
-  imageWidth: IMAGE_WIDTH,
-  imageHeight: IMAGE_HEIGHT,
+// ================= UTIL =================
+function clamp(v,min,max){ return Math.min(max,Math.max(min,v)); }
+function uid(){ return Math.random().toString(36).slice(2); }
 
-  onClick: ({x, y}) => {
-    addMarker({
-      id: uid(),
-      label: "Marker",
-      x: Math.round(x),
-      y: Math.round(y)
-    });
-  },
-
-  onZoomChange: (z) => {
-    zoomText.innerText = Math.round(z * 100) + "%";
-  }
-});
-
-// =====================
-// MARKERS
-// =====================
-
-function uid() {
-  return Math.random().toString(36).slice(2);
+// ================= ZOOM =================
+function getFitZoom(){
+  return Math.min(
+    viewport.clientWidth/IMAGE_WIDTH,
+    viewport.clientHeight/IMAGE_HEIGHT
+  );
 }
 
-function renderMarkers() {
-  markersLayer.innerHTML = "";
+function updateStage(){
+  stage.style.width = (IMAGE_WIDTH*zoom)+"px";
+  stage.style.height = (IMAGE_HEIGHT*zoom)+"px";
 
-  markers.forEach(m => {
-    const el = document.createElement("div");
-    el.className = "marker";
-    el.style.left = (m.x * mapViewport.getZoom()) + "px";
-    el.style.top = (m.y * mapViewport.getZoom()) + "px";
-    el.innerText = m.label;
+  mapImage.style.width = (IMAGE_WIDTH*zoom)+"px";
+  mapImage.style.height = (IMAGE_HEIGHT*zoom)+"px";
+
+  zoomText.innerText = Math.round(zoom*100)+"%";
+}
+
+function center(){
+  viewport.scrollLeft = (IMAGE_WIDTH*zoom - viewport.clientWidth)/2;
+  viewport.scrollTop = (IMAGE_HEIGHT*zoom - viewport.clientHeight)/2;
+}
+
+function zoomTo(z){
+  const prev = zoom;
+  const min = fitZoom;
+
+  zoom = clamp(z,min,5);
+  if(zoom===prev) return;
+
+  const cx = viewport.scrollLeft + viewport.clientWidth/2;
+  const cy = viewport.scrollTop + viewport.clientHeight/2;
+
+  const ix = cx/prev;
+  const iy = cy/prev;
+
+  updateStage();
+
+  viewport.scrollLeft = ix*zoom - viewport.clientWidth/2;
+  viewport.scrollTop = iy*zoom - viewport.clientHeight/2;
+}
+
+function reset(){
+  fitZoom = getFitZoom();
+  zoom = fitZoom;
+  updateStage();
+  center();
+}
+
+// ================= MARKERS =================
+function renderMarkers(){
+  markersLayer.innerHTML="";
+  markers.forEach(m=>{
+    const el=document.createElement("div");
+    el.className="marker";
+    el.style.left=(m.x*zoom)+"px";
+    el.style.top=(m.y*zoom)+"px";
+    el.innerText=m.label;
     markersLayer.appendChild(el);
   });
 }
 
-function addMarker(m) {
-  markers.push(m);
+function addMarker(x,y){
+  markers.push({id:uid(),label:"M",x,y});
   renderMarkers();
 }
 
-// =====================
-// API REFRESH
-// =====================
-
-function startApi() {
-  markerApi.startAutoRefresh((serverMarkers) => {
-    markers = serverMarkers;
+// ================= API =================
+function startApi(){
+  markerApi.startAutoRefresh(data=>{
+    markers=data;
     renderMarkers();
   });
 }
 
-// =====================
-// EVENTS
-// =====================
+// ================= EVENTS =================
+zoomInBtn.onclick=()=>zoomTo(zoom+0.25);
+zoomOutBtn.onclick=()=>zoomTo(zoom-0.25);
+resetBtn.onclick=reset;
 
-zoomInBtn.onclick = mapViewport.zoomIn;
-zoomOutBtn.onclick = mapViewport.zoomOut;
-resetBtn.onclick = mapViewport.reset;
+viewport.addEventListener("wheel",e=>{
+  e.preventDefault();
+  zoomTo(zoom + (e.deltaY<0?0.25:-0.25));
+},{passive:false});
 
-loadBtn.onclick = () => loadInput.click();
+viewport.addEventListener("mousedown",e=>{
+  isDragging=true;
+  dragMoved=false;
+  dragStartX=e.clientX;
+  dragStartY=e.clientY;
+  startScrollLeft=viewport.scrollLeft;
+  startScrollTop=viewport.scrollTop;
+  viewport.classList.add("dragging");
+});
 
-loadInput.onchange = (e) => {
-  const file = e.target.files[0];
-  markerJson.loadMarkersFromFile(file, (data) => {
-    markers = data;
+window.addEventListener("mousemove",e=>{
+  if(!isDragging)return;
+  const dx=e.clientX-dragStartX;
+  const dy=e.clientY-dragStartY;
+
+  if(Math.abs(dx)>3||Math.abs(dy)>3) dragMoved=true;
+
+  viewport.scrollLeft=startScrollLeft-dx;
+  viewport.scrollTop=startScrollTop-dy;
+});
+
+window.addEventListener("mouseup",()=>{
+  isDragging=false;
+  viewport.classList.remove("dragging");
+});
+
+mapImage.addEventListener("click",e=>{
+  if(dragMoved) return;
+
+  const rect=mapImage.getBoundingClientRect();
+  const x=(e.clientX-rect.left)/zoom;
+  const y=(e.clientY-rect.top)/zoom;
+
+  addMarker(Math.round(x),Math.round(y));
+});
+
+// JSON
+loadBtn.onclick=()=>loadInput.click();
+
+loadInput.onchange=e=>{
+  markerJson.loadMarkersFromFile(e.target.files[0],data=>{
+    markers=data;
     renderMarkers();
   });
 };
 
-exportBtn.onclick = () => {
-  markerJson.exportMarkers(markers);
-};
+exportBtn.onclick=()=>markerJson.exportMarkers(markers);
 
-// =====================
-// INIT
-// =====================
+// resize
+window.addEventListener("resize",()=>{
+  const newFit=getFitZoom();
+  if(zoom<newFit){
+    zoom=newFit;
+    updateStage();
+    center();
+  }
+});
 
-requestAnimationFrame(() => {
-  mapViewport.reset();
+// ================= INIT =================
+requestAnimationFrame(()=>{
+  reset();
   startApi();
 });
 
