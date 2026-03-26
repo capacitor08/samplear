@@ -6,96 +6,50 @@
   <title>Map Marker App</title>
   <style>
     * { box-sizing: border-box; }
-    body {
+
+    html, body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
       background: #f3f4f6;
-      color: #111827;
+      font-family: Arial, sans-serif;
     }
-    .page {
-      display: grid;
-      grid-template-columns: 1.35fr 0.65fr;
-      gap: 24px;
-      padding: 24px;
-      max-width: 1500px;
-      margin: 0 auto;
-      min-height: 100vh;
+
+    .map-page {
+      width: 100vw;
+      height: 100vh;
+      padding: 12px;
     }
-    .panel {
+
+    .map-panel {
+      width: 100%;
+      height: 100%;
       background: #fff;
       border-radius: 18px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.08);
       overflow: hidden;
     }
-    .panel-header {
-      padding: 20px 20px 0;
-    }
-    .panel-body {
-      padding: 20px;
-    }
-    .title {
-      margin: 0;
-      font-size: 28px;
-      font-weight: 700;
-    }
-    .subtitle {
-      margin: 8px 0 0;
-      font-size: 14px;
-      color: #6b7280;
-      line-height: 1.4;
-    }
-    .toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-    }
-    button, input, textarea {
-      font: inherit;
-    }
-    button {
-      border: 1px solid #d1d5db;
-      background: #fff;
-      color: #111827;
-      border-radius: 12px;
-      padding: 10px 14px;
-      cursor: pointer;
-    }
-    button.primary {
-      background: #111827;
-      color: #fff;
-      border-color: #111827;
-    }
-    button:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      font-size: 14px;
-      color: #4b5563;
-      margin-bottom: 14px;
-    }
+
     .map-viewport {
       position: relative;
-      height: 78vh;
       width: 100%;
+      height: 100%;
       overflow: auto;
-      border: 1px solid #d1d5db;
-      border-radius: 18px;
       background: #fff;
       cursor: grab;
       user-select: none;
     }
+
     .map-viewport.dragging {
       cursor: grabbing;
     }
+
     .map-stage {
       position: relative;
       transform-origin: top left;
     }
+
     .map-image {
       display: block;
       max-width: none;
@@ -103,6 +57,7 @@
       user-select: none;
       pointer-events: auto;
     }
+
     .marker {
       position: absolute;
       transform: translate(-50%, -100%);
@@ -110,10 +65,9 @@
       border: none;
       padding: 0;
       z-index: 10;
+      pointer-events: none;
     }
-    .marker.selected {
-      z-index: 20;
-    }
+
     .marker-pin {
       width: 18px;
       height: 18px;
@@ -124,6 +78,7 @@
       margin: 0 auto;
       position: relative;
     }
+
     .marker-pin::after {
       content: "";
       position: absolute;
@@ -134,6 +89,7 @@
       top: 5px;
       left: 5px;
     }
+
     .marker-label {
       margin-top: 6px;
       background: rgba(0,0,0,0.75);
@@ -143,220 +99,23 @@
       border-radius: 999px;
       white-space: nowrap;
     }
-    .tip {
-      margin-top: 10px;
-      font-size: 12px;
-      color: #6b7280;
-    }
-    .side {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-    .form-group {
-      margin-bottom: 14px;
-    }
-    .form-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-      font-size: 14px;
-    }
-    input, textarea {
-      width: 100%;
-      border: 1px solid #d1d5db;
-      border-radius: 12px;
-      padding: 10px 12px;
-    }
-    textarea {
-      min-height: 90px;
-      resize: vertical;
-    }
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    .helper {
-      font-size: 12px;
-      color: #6b7280;
-      margin-bottom: 14px;
-    }
-    .marker-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .marker-card {
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      padding: 12px;
-    }
-    .marker-card.selected {
-      border-color: #111827;
-      background: #f9fafb;
-    }
-    .marker-card-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-    }
-    .marker-card-main {
-      flex: 1;
-      cursor: pointer;
-    }
-    .small {
-      font-size: 12px;
-      color: #6b7280;
-    }
-    .strong {
-      font-weight: 700;
-      margin-top: 2px;
-    }
-    .coords {
-      margin-top: 6px;
-      font-size: 14px;
-      color: #4b5563;
-    }
-    .desc {
-      margin-top: 8px;
-      font-size: 14px;
-      color: #4b5563;
-    }
-    .delete-btn {
-      background: transparent;
-      border: none;
-      color: #b91c1c;
-      font-size: 18px;
-      line-height: 1;
-      padding: 4px 8px;
-    }
-    .status {
-      margin-top: 10px;
-      font-size: 12px;
-      color: #2563eb;
-    }
-    @media (max-width: 1100px) {
-      .page {
-        grid-template-columns: 1fr;
-      }
-      .map-viewport {
-        height: 60vh;
-      }
-    }
   </style>
 </head>
 <body>
-  <div class="page">
-    <div class="panel">
-      <div class="panel-header">
-        <h1 class="title">Fixed Map Marker App</h1>
-        <p class="subtitle">Only the map area zooms and pans. Markers use real X/Y coordinates based on your uploaded map.</p>
-        <div class="toolbar">
-          <button id="zoomOutBtn">Zoom Out</button>
-          <button id="resetBtn">Reset</button>
-          <button id="zoomInBtn">Zoom In</button>
-          <button id="loadBtn">Load JSON</button>
-          <button id="exportBtn" class="primary" disabled>Export JSON</button>
-          <input id="loadInput" type="file" accept="application/json,.json" style="display:none;" />
-        </div>
-      </div>
-      <div class="panel-body">
-        <div class="meta">
-          <div>Image: <strong id="imageName"></strong></div>
-          <div>Size: <strong id="imageSize"></strong></div>
-          <div>Zoom: <strong id="zoomValue"></strong></div>
-        </div>
-
-        <div id="viewport" class="map-viewport">
-          <div id="stage" class="map-stage">
-            <img id="mapImage" class="map-image" alt="Golf course map" />
-            <div id="markersLayer"></div>
-          </div>
-        </div>
-
-        <div class="tip">Mouse wheel: zoom map only. Drag the map area to pan. Click on the map to add a marker.</div>
-        <div id="statusText" class="status"></div>
-      </div>
-    </div>
-
-    <div class="side">
-      <div class="panel">
-        <div class="panel-header">
-          <h2 class="title" style="font-size:24px;">Add Marker by X/Y</h2>
-        </div>
-        <div class="panel-body">
-          <div class="form-group">
-            <label for="labelInput">Label</label>
-            <input id="labelInput" type="text" placeholder="e.g. Door, Desk, Camera" />
-          </div>
-
-          <div class="grid-2">
-            <div class="form-group">
-              <label for="xInput">X</label>
-              <input id="xInput" type="number" step="1" />
-            </div>
-            <div class="form-group">
-              <label for="yInput">Y</label>
-              <input id="yInput" type="number" step="1" />
-            </div>
-          </div>
-
-          <div class="helper" id="coordRange"></div>
-
-          <div class="form-group">
-            <label for="descInput">Description</label>
-            <textarea id="descInput" placeholder="Optional note for this marker"></textarea>
-          </div>
-
-          <button id="addMarkerBtn" class="primary" style="width:100%;">Add Marker</button>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="panel-header">
-          <h2 class="title" style="font-size:24px;">Markers (<span id="markerCount">0</span>)</h2>
-        </div>
-        <div class="panel-body">
-          <div id="markerList" class="marker-list"></div>
-        </div>
-      </div>
-
-      <div class="panel" id="editPanel" style="display:none;">
-        <div class="panel-header">
-          <h2 class="title" style="font-size:24px;">Edit Selected Marker</h2>
-        </div>
-        <div class="panel-body">
-          <div class="form-group">
-            <label for="editLabelInput">Label</label>
-            <input id="editLabelInput" type="text" />
-          </div>
-
-          <div class="grid-2">
-            <div class="form-group">
-              <label for="editXInput">X</label>
-              <input id="editXInput" type="number" step="1" />
-            </div>
-            <div class="form-group">
-              <label for="editYInput">Y</label>
-              <input id="editYInput" type="number" step="1" />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="editDescInput">Description</label>
-            <textarea id="editDescInput"></textarea>
-          </div>
+  <div class="map-page">
+    <div class="map-panel">
+      <div id="viewport" class="map-viewport">
+        <div id="stage" class="map-stage">
+          <img id="mapImage" class="map-image" alt="Map" />
+          <div id="markersLayer"></div>
         </div>
       </div>
     </div>
   </div>
 
   <script src="markerApi.js"></script>
-  <script src="markerJson.js"></script>
   <script>
     const ACTUAL_IMAGE_SRC = "mondamin_map.png";
-    const ACTUAL_IMAGE_NAME = "mondamin_map.png";
     const IMAGE_WIDTH = 2048;
     const IMAGE_HEIGHT = 1280;
     const MIN_ZOOM = 0.2;
@@ -368,7 +127,6 @@
     let zoom = 1;
     let fitZoom = 1;
     let markers = [];
-    let selectedId = null;
     let isDragging = false;
     let dragMoved = false;
     let dragStartX = 0;
@@ -380,59 +138,16 @@
     const stage = document.getElementById("stage");
     const mapImage = document.getElementById("mapImage");
     const markersLayer = document.getElementById("markersLayer");
-    const imageName = document.getElementById("imageName");
-    const imageSize = document.getElementById("imageSize");
-    const zoomValue = document.getElementById("zoomValue");
-    const markerList = document.getElementById("markerList");
-    const markerCount = document.getElementById("markerCount");
-    const exportBtn = document.getElementById("exportBtn");
-    const coordRange = document.getElementById("coordRange");
-    const loadBtn = document.getElementById("loadBtn");
-    const loadInput = document.getElementById("loadInput");
-    const statusText = document.getElementById("statusText");
-
-    const labelInput = document.getElementById("labelInput");
-    const xInput = document.getElementById("xInput");
-    const yInput = document.getElementById("yInput");
-    const descInput = document.getElementById("descInput");
-
-    const editPanel = document.getElementById("editPanel");
-    const editLabelInput = document.getElementById("editLabelInput");
-    const editXInput = document.getElementById("editXInput");
-    const editYInput = document.getElementById("editYInput");
-    const editDescInput = document.getElementById("editDescInput");
-
-    function clamp(value, min, max) {
-      return Math.min(max, Math.max(min, value));
-    }
-
-    function uid() {
-      return Math.random().toString(36).slice(2, 10);
-    }
-
-    function setStatus(message, isError = false) {
-      statusText.textContent = message || "";
-      statusText.style.color = isError ? "#b91c1c" : "#2563eb";
-    }
 
     const markerApi = MarkerApi.create({
       apiUrl: MARKERS_API_URL,
       refreshMs: REFRESH_MS,
       imageWidth: IMAGE_WIDTH,
-      imageHeight: IMAGE_HEIGHT,
-      onStatus: setStatus
+      imageHeight: IMAGE_HEIGHT
     });
 
-    const markerJson = MarkerJson.create({
-      imageName: ACTUAL_IMAGE_NAME,
-      imageWidth: IMAGE_WIDTH,
-      imageHeight: IMAGE_HEIGHT,
-      normalizeMarkers: markerApi.normalizeMarkers,
-      onStatus: setStatus
-    });
-
-    function getSelectedMarker() {
-      return markers.find(m => m.id === selectedId) || null;
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
     }
 
     function getFitZoom() {
@@ -452,7 +167,6 @@
       stage.style.height = (IMAGE_HEIGHT * zoom) + "px";
       mapImage.style.width = (IMAGE_WIDTH * zoom) + "px";
       mapImage.style.height = (IMAGE_HEIGHT * zoom) + "px";
-      zoomValue.textContent = Math.round(zoom * 100) + "%";
     }
 
     function centerViewport() {
@@ -475,116 +189,29 @@
       markersLayer.innerHTML = "";
 
       markers.forEach((marker, index) => {
-        const btn = document.createElement("button");
-        btn.className = "marker" + (marker.id === selectedId ? " selected" : "");
-        btn.style.left = (marker.x * zoom) + "px";
-        btn.style.top = (marker.y * zoom) + "px";
-        btn.title = `${marker.label} (${marker.x}, ${marker.y})`;
+        const el = document.createElement("div");
+        el.className = "marker";
+        el.style.left = (marker.x * zoom) + "px";
+        el.style.top = (marker.y * zoom) + "px";
+        el.title = `${marker.label} (${marker.x}, ${marker.y})`;
 
-        btn.innerHTML = `
+        el.innerHTML = `
           <div class="marker-pin"></div>
           <div class="marker-label">${index + 1}. ${escapeHtml(marker.label)}</div>
         `;
 
-        btn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          selectedId = marker.id;
-          renderAll();
-        });
-
-        markersLayer.appendChild(btn);
+        markersLayer.appendChild(el);
       });
-    }
-
-    function renderMarkerList() {
-      markerCount.textContent = markers.length;
-      exportBtn.disabled = markers.length === 0;
-
-      if (markers.length === 0) {
-        markerList.innerHTML = '<div class="small">No markers yet.</div>';
-        return;
-      }
-
-      markerList.innerHTML = "";
-      markers.forEach((marker, index) => {
-        const card = document.createElement("div");
-        card.className = "marker-card" + (marker.id === selectedId ? " selected" : "");
-
-        const descHtml = marker.description
-          ? `<div class="desc">${escapeHtml(marker.description)}</div>`
-          : "";
-
-        card.innerHTML = `
-          <div class="marker-card-top">
-            <div class="marker-card-main">
-              <div class="small">Marker ${index + 1}</div>
-              <div class="strong">${escapeHtml(marker.label)}</div>
-              <div class="coords">X: ${marker.x} | Y: ${marker.y}</div>
-              ${descHtml}
-            </div>
-            <button class="delete-btn" title="Delete">×</button>
-          </div>
-        `;
-
-        card.querySelector(".marker-card-main").addEventListener("click", () => {
-          selectedId = marker.id;
-          renderAll();
-        });
-
-        card.querySelector(".delete-btn").addEventListener("click", () => {
-          markers = markers.filter(m => m.id !== marker.id);
-          if (selectedId === marker.id) selectedId = null;
-          renderAll();
-        });
-
-        markerList.appendChild(card);
-      });
-    }
-
-    function renderEditPanel() {
-      const marker = getSelectedMarker();
-      if (!marker) {
-        editPanel.style.display = "none";
-        return;
-      }
-
-      editPanel.style.display = "block";
-      editLabelInput.value = marker.label;
-      editXInput.value = marker.x;
-      editYInput.value = marker.y;
-      editDescInput.value = marker.description || "";
     }
 
     function renderAll() {
       updateStageSize();
       renderMarkers();
-      renderMarkerList();
-      renderEditPanel();
-    }
-
-    function addMarker(marker) {
-      markers.push(marker);
-      selectedId = marker.id;
-      renderAll();
-    }
-
-    function updateSelectedMarker(patch) {
-      markers = markers.map(marker => {
-        if (marker.id !== selectedId) return marker;
-        return { ...marker, ...patch };
-      });
-      renderAll();
     }
 
     function startApiRefresh() {
       markerApi.startAutoRefresh((loadedMarkers) => {
-        const previousSelectedId = selectedId;
-
         markers = loadedMarkers;
-        selectedId = loadedMarkers.some(m => m.id === previousSelectedId)
-          ? previousSelectedId
-          : (loadedMarkers.length ? loadedMarkers[0].id : null);
-
         renderAll();
       });
     }
@@ -615,89 +242,6 @@
       renderAll();
       centerViewport();
     }
-
-    function handleMapClick(e) {
-      if (dragMoved) return;
-
-      const rect = mapImage.getBoundingClientRect();
-      const x = clamp((e.clientX - rect.left) / zoom, 0, IMAGE_WIDTH);
-      const y = clamp((e.clientY - rect.top) / zoom, 0, IMAGE_HEIGHT);
-
-      addMarker({
-        id: uid(),
-        label: `Marker ${markers.length + 1}`,
-        x: Math.round(x),
-        y: Math.round(y),
-        description: ""
-      });
-
-      setStatus("Marker added locally. Server refresh may overwrite local markers.");
-    }
-
-    document.getElementById("zoomInBtn").addEventListener("click", () => zoomTo(zoom + ZOOM_STEP));
-    document.getElementById("zoomOutBtn").addEventListener("click", () => zoomTo(zoom - ZOOM_STEP));
-    document.getElementById("resetBtn").addEventListener("click", () => resetToFit());
-    exportBtn.addEventListener("click", () => markerJson.exportMarkers(markers));
-
-    loadBtn.addEventListener("click", () => loadInput.click());
-    loadInput.addEventListener("change", (event) => {
-      const file = event.target.files && event.target.files[0];
-      if (!file) return;
-
-      markerJson.loadMarkersFromFile(file, (loadedMarkers) => {
-        markers = loadedMarkers;
-        selectedId = loadedMarkers.length ? loadedMarkers[0].id : null;
-        renderAll();
-      });
-
-      loadInput.value = "";
-    });
-
-    document.getElementById("addMarkerBtn").addEventListener("click", () => {
-      const label = labelInput.value.trim();
-      const x = clamp(Number(xInput.value), 0, IMAGE_WIDTH);
-      const y = clamp(Number(yInput.value), 0, IMAGE_HEIGHT);
-      const description = descInput.value.trim();
-
-      if (!label || Number.isNaN(x) || Number.isNaN(y)) {
-        setStatus("Enter a valid label, X, and Y.", true);
-        return;
-      }
-
-      addMarker({
-        id: uid(),
-        label,
-        x: Math.round(x),
-        y: Math.round(y),
-        description
-      });
-
-      labelInput.value = "";
-      xInput.value = 200;
-      yInput.value = 200;
-      descInput.value = "";
-      setStatus("Marker added locally. Server refresh may overwrite local markers.");
-    });
-
-    editLabelInput.addEventListener("input", () => {
-      if (!getSelectedMarker()) return;
-      updateSelectedMarker({ label: editLabelInput.value });
-    });
-
-    editXInput.addEventListener("input", () => {
-      if (!getSelectedMarker()) return;
-      updateSelectedMarker({ x: Math.round(clamp(Number(editXInput.value || 0), 0, IMAGE_WIDTH)) });
-    });
-
-    editYInput.addEventListener("input", () => {
-      if (!getSelectedMarker()) return;
-      updateSelectedMarker({ y: Math.round(clamp(Number(editYInput.value || 0), 0, IMAGE_HEIGHT)) });
-    });
-
-    editDescInput.addEventListener("input", () => {
-      if (!getSelectedMarker()) return;
-      updateSelectedMarker({ description: editDescInput.value });
-    });
 
     viewport.addEventListener("wheel", (e) => {
       e.preventDefault();
@@ -740,14 +284,7 @@
       }, 0);
     });
 
-    mapImage.addEventListener("click", handleMapClick);
-
     mapImage.src = ACTUAL_IMAGE_SRC;
-    imageName.textContent = ACTUAL_IMAGE_NAME;
-    imageSize.textContent = `${IMAGE_WIDTH} × ${IMAGE_HEIGHT}`;
-    coordRange.textContent = `Coordinate range: X = 0 to ${IMAGE_WIDTH}, Y = 0 to ${IMAGE_HEIGHT}`;
-    xInput.value = 200;
-    yInput.value = 200;
 
     window.addEventListener("resize", () => {
       fitZoom = Math.max(MIN_ZOOM, Number(getFitZoom().toFixed(4)));
