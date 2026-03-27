@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+  />
   <title>Map Marker App</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#111827">
+
   <style>
     * { box-sizing: border-box; }
 
@@ -17,12 +21,13 @@
       background: #f3f4f6;
       font-family: Arial, sans-serif;
       touch-action: none;
+      overscroll-behavior: none;
     }
 
     .map-page {
       width: 100vw;
-      height: 100vh;
-      padding: 12px;
+      height: 100dvh;
+      padding: 8px;
     }
 
     .map-panel {
@@ -42,6 +47,13 @@
       background: #fff;
       cursor: grab;
       user-select: none;
+      touch-action: none;
+      overscroll-behavior: none;
+      -webkit-overflow-scrolling: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .map-viewport.dragging {
@@ -51,6 +63,9 @@
     .map-stage {
       position: relative;
       transform-origin: top left;
+      touch-action: none;
+
+      flex: 0 0 auto;
     }
 
     .map-image {
@@ -59,21 +74,12 @@
       -webkit-user-drag: none;
       user-select: none;
       pointer-events: auto;
-    }
-
-    .map-page,
-    .map-panel,
-    .map-viewport {
       touch-action: none;
     }
 
     .marker {
       position: absolute;
       transform: translate(-50%, -100%);
-      background: transparent;
-      border: none;
-      padding: 0;
-      z-index: 10;
       pointer-events: none;
     }
 
@@ -110,365 +116,165 @@
     }
   </style>
 </head>
+
 <body>
-  <div class="map-page">
-    <div class="map-panel">
-      <div id="viewport" class="map-viewport">
-        <div id="stage" class="map-stage">
-          <img id="mapImage" class="map-image" alt="Map" />
-          <div id="markersLayer"></div>
-        </div>
+
+<div class="map-page">
+  <div class="map-panel">
+    <div id="viewport" class="map-viewport">
+      <div id="stage" class="map-stage">
+        <img id="mapImage" class="map-image" />
+        <div id="markersLayer"></div>
       </div>
     </div>
   </div>
+</div>
 
-  <script src="markerApi.js"></script>
-  <script>
-    const ACTUAL_IMAGE_SRC = "mondamin_map.png";
-    const IMAGE_WIDTH = 2048;
-    const IMAGE_HEIGHT = 1280;
-    const MIN_ZOOM = 0.2;
-    const MAX_ZOOM = 5;
-    const ZOOM_STEP = 0.25;
-    const MARKERS_API_URL = "https://capacitor08.github.io/samplear/api/markers_xy.json";
-    const REFRESH_MS = 5000;
+<script src="markerApi.js"></script>
 
-    let zoom = 1;
-    let fitZoom = 1;
-    let markers = [];
-    let isDragging = false;
-    let dragMoved = false;
-    let dragStartX = 0;
-    let dragStartY = 0;
-    let startScrollLeft = 0;
-    let startScrollTop = 0;
+<script>
 
-    let pinchStartDistance = 0;
-    let pinchStartZoom = 1;
-    let pinchCenterClientX = 0;
-    let pinchCenterClientY = 0;
-    let isPinching = false;
+const IMAGE_WIDTH = 2048;
+const IMAGE_HEIGHT = 1280;
+const IMAGE_SRC = "mondamin_map.png";
+const API_URL = "https://capacitor08.github.io/samplear/api/markers_xy.json";
 
-    let lastTapTime = 0;
+let zoom = 1;
+let fitZoom = 1;
+let markers = [];
 
-    const viewport = document.getElementById("viewport");
-    const stage = document.getElementById("stage");
-    const mapImage = document.getElementById("mapImage");
-    const markersLayer = document.getElementById("markersLayer");
+const viewport = document.getElementById("viewport");
+const stage = document.getElementById("stage");
+const mapImage = document.getElementById("mapImage");
+const markersLayer = document.getElementById("markersLayer");
 
-    const markerApi = MarkerApi.create({
-      apiUrl: MARKERS_API_URL,
-      refreshMs: REFRESH_MS,
-      imageWidth: IMAGE_WIDTH,
-      imageHeight: IMAGE_HEIGHT
-    });
+mapImage.src = IMAGE_SRC;
 
-    function clamp(value, min, max) {
-      return Math.min(max, Math.max(min, value));
-    }
+const markerApi = MarkerApi.create({
+  apiUrl: API_URL,
+  imageWidth: IMAGE_WIDTH,
+  imageHeight: IMAGE_HEIGHT
+});
 
-    function getTouchDistance(t1, t2) {
-      const dx = t2.clientX - t1.clientX;
-      const dy = t2.clientY - t1.clientY;
-      return Math.sqrt(dx * dx + dy * dy);
-    }
+function clamp(v,min,max){ return Math.min(max,Math.max(min,v)); }
 
-    function getTouchCenter(t1, t2) {
-      return {
-        x: (t1.clientX + t2.clientX) / 2,
-        y: (t1.clientY + t2.clientY) / 2
-      };
-    }
+function getFitZoom(){
+  return Math.min(
+    viewport.clientWidth / IMAGE_WIDTH,
+    viewport.clientHeight / IMAGE_HEIGHT
+  );
+}
 
-    function getFitZoom() {
-      const availableWidth = viewport.clientWidth || 1;
-      const availableHeight = viewport.clientHeight || 1;
+function updateStage(){
+  stage.style.width = (IMAGE_WIDTH * zoom) + "px";
+  stage.style.height = (IMAGE_HEIGHT * zoom) + "px";
 
-      const scaleX = availableWidth / IMAGE_WIDTH;
-      const scaleY = availableHeight / IMAGE_HEIGHT;
+  mapImage.style.width = (IMAGE_WIDTH * zoom) + "px";
+  mapImage.style.height = (IMAGE_HEIGHT * zoom) + "px";
+}
 
-      const isPortrait = availableHeight > availableWidth;
+function centerViewport() {
+  const contentWidth = IMAGE_WIDTH * zoom;
+  const contentHeight = IMAGE_HEIGHT * zoom;
 
-      if (isPortrait) {
-        return scaleX;
-      }
+  const viewportWidth = viewport.clientWidth;
+  const viewportHeight = viewport.clientHeight;
 
-      return Math.min(scaleX, scaleY);
-    }
+  if (contentWidth > viewportWidth) {
+    viewport.scrollLeft = (contentWidth - viewportWidth) / 2;
+  } else {
+    viewport.scrollLeft = 0;
+  }
 
-    function getMinAllowedZoom() {
-      return fitZoom;
-    }
+  if (contentHeight > viewportHeight) {
+    viewport.scrollTop = (contentHeight - viewportHeight) / 2;
+  } else {
+    viewport.scrollTop = 0;
+  }
+}
 
-    function updateStageSize() {
-      stage.style.width = (IMAGE_WIDTH * zoom) + "px";
-      stage.style.height = (IMAGE_HEIGHT * zoom) + "px";
-      mapImage.style.width = (IMAGE_WIDTH * zoom) + "px";
-      mapImage.style.height = (IMAGE_HEIGHT * zoom) + "px";
-    }
+function renderMarkers(){
+  markersLayer.innerHTML="";
+  markers.forEach(m=>{
+    const el=document.createElement("div");
+    el.className="marker";
+    el.style.left=(m.x * zoom)+"px";
+    el.style.top=(m.y * zoom)+"px";
 
-    function centerViewport() {
-      const contentWidth = IMAGE_WIDTH * zoom;
-      const contentHeight = IMAGE_HEIGHT * zoom;
-      viewport.scrollLeft = Math.max(0, (contentWidth - viewport.clientWidth) / 2);
-      viewport.scrollTop = Math.max(0, (contentHeight - viewport.clientHeight) / 2);
-    }
+    el.innerHTML = `
+      <div class="marker-pin"></div>
+      <div class="marker-label">${m.label}</div>
+    `;
 
-    function escapeHtml(value) {
-      return String(value)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
+    markersLayer.appendChild(el);
+  });
+}
 
-    function renderMarkers() {
-      markersLayer.innerHTML = "";
+function renderAll(){
+  updateStage();
+  renderMarkers();
+}
 
-      markers.forEach((marker, index) => {
-        const el = document.createElement("div");
-        el.className = "marker";
-        el.style.left = (marker.x * zoom) + "px";
-        el.style.top = (marker.y * zoom) + "px";
-        el.title = `${marker.label} (${marker.x}, ${marker.y})`;
+function reset(){
+  fitZoom = getFitZoom();
+  zoom = fitZoom;
+  renderAll();
+  centerViewport();
+}
 
-        el.innerHTML = `
-          <div class="marker-pin"></div>
-          <div class="marker-label">${index + 1}. ${escapeHtml(marker.label)}</div>
-        `;
+function zoomTo(z){
+  const prev = zoom;
+  zoom = clamp(z, fitZoom, 5);
 
-        markersLayer.appendChild(el);
-      });
-    }
+  const cx = viewport.scrollLeft + viewport.clientWidth/2;
+  const cy = viewport.scrollTop + viewport.clientHeight/2;
 
-    function renderAll() {
-      updateStageSize();
-      renderMarkers();
-    }
+  const ix = cx/prev;
+  const iy = cy/prev;
 
-    function startApiRefresh() {
-      markerApi.startAutoRefresh((loadedMarkers) => {
-        markers = loadedMarkers;
-        renderAll();
-      });
-    }
+  renderAll();
 
-    function zoomTo(nextZoom, keepCenter = true) {
-      const prevZoom = zoom;
-      const minAllowedZoom = getMinAllowedZoom();
-      const targetZoom = clamp(Number(nextZoom.toFixed(2)), minAllowedZoom, MAX_ZOOM);
-      if (targetZoom === prevZoom) return;
+  viewport.scrollLeft = ix*zoom - viewport.clientWidth/2;
+  viewport.scrollTop = iy*zoom - viewport.clientHeight/2;
+}
 
-      const centerX = viewport.scrollLeft + viewport.clientWidth / 2;
-      const centerY = viewport.scrollTop + viewport.clientHeight / 2;
-      const imageX = centerX / prevZoom;
-      const imageY = centerY / prevZoom;
+viewport.addEventListener("wheel",e=>{
+  e.preventDefault();
+  zoomTo(zoom + (e.deltaY<0?0.25:-0.25));
+},{passive:false});
 
-      zoom = targetZoom;
-      renderAll();
+let isDragging=false;
+let startX=0,startY=0,startL=0,startT=0;
 
-      if (keepCenter) {
-        viewport.scrollLeft = imageX * zoom - viewport.clientWidth / 2;
-        viewport.scrollTop = imageY * zoom - viewport.clientHeight / 2;
-      }
-    }
+viewport.addEventListener("mousedown",e=>{
+  isDragging=true;
+  startX=e.clientX;
+  startY=e.clientY;
+  startL=viewport.scrollLeft;
+  startT=viewport.scrollTop;
+});
 
-    function zoomToPoint(nextZoom, clientX, clientY) {
-      const prevZoom = zoom;
-      const minAllowedZoom = getMinAllowedZoom();
-      const targetZoom = clamp(Number(nextZoom.toFixed(2)), minAllowedZoom, MAX_ZOOM);
-      if (targetZoom === prevZoom) return;
+window.addEventListener("mousemove",e=>{
+  if(!isDragging) return;
+  viewport.scrollLeft = startL - (e.clientX-startX);
+  viewport.scrollTop = startT - (e.clientY-startY);
+});
 
-      const rect = viewport.getBoundingClientRect();
-      const pointX = clientX - rect.left + viewport.scrollLeft;
-      const pointY = clientY - rect.top + viewport.scrollTop;
+window.addEventListener("mouseup",()=> isDragging=false);
 
-      const imageX = pointX / prevZoom;
-      const imageY = pointY / prevZoom;
+function startApi(){
+  markerApi.startAutoRefresh(data=>{
+    markers=data;
+    renderAll();
+  });
+}
 
-      zoom = targetZoom;
-      renderAll();
+requestAnimationFrame(()=>{
+  reset();
+  startApi();
+});
 
-      viewport.scrollLeft = imageX * zoom - (clientX - rect.left);
-      viewport.scrollTop = imageY * zoom - (clientY - rect.top);
-    }
+</script>
 
-    function resetToFit() {
-      fitZoom = Math.max(MIN_ZOOM, Number(getFitZoom().toFixed(4)));
-      zoom = fitZoom;
-      renderAll();
-      centerViewport();
-    }
-
-    viewport.addEventListener("wheel", (e) => {
-      e.preventDefault();
-      if (e.deltaY < 0) {
-        zoomTo(zoom + ZOOM_STEP);
-      } else {
-        zoomTo(zoom - ZOOM_STEP);
-      }
-    }, { passive: false });
-
-    viewport.addEventListener("mousedown", (e) => {
-      if (e.button !== 0) return;
-      isDragging = true;
-      isPinching = false;
-      dragMoved = false;
-      dragStartX = e.clientX;
-      dragStartY = e.clientY;
-      startScrollLeft = viewport.scrollLeft;
-      startScrollTop = viewport.scrollTop;
-      viewport.classList.add("dragging");
-      e.preventDefault();
-    });
-
-    window.addEventListener("mousemove", (e) => {
-      if (!isDragging || isPinching) return;
-      const dx = e.clientX - dragStartX;
-      const dy = e.clientY - dragStartY;
-      if (Math.abs(dx) > 3 || Math.abs(dy) > 3) {
-        dragMoved = true;
-      }
-      viewport.scrollLeft = startScrollLeft - dx;
-      viewport.scrollTop = startScrollTop - dy;
-    });
-
-    window.addEventListener("mouseup", () => {
-      if (!isDragging) return;
-      isDragging = false;
-      viewport.classList.remove("dragging");
-      setTimeout(() => {
-        dragMoved = false;
-      }, 0);
-    });
-
-    viewport.addEventListener("touchstart", (e) => {
-      if (e.touches.length === 1) {
-        const t = e.touches[0];
-        isDragging = true;
-        isPinching = false;
-        dragMoved = false;
-        dragStartX = t.clientX;
-        dragStartY = t.clientY;
-        startScrollLeft = viewport.scrollLeft;
-        startScrollTop = viewport.scrollTop;
-      } else if (e.touches.length === 2) {
-        isDragging = false;
-        isPinching = true;
-        dragMoved = true;
-
-        const t1 = e.touches[0];
-        const t2 = e.touches[1];
-
-        pinchStartDistance = getTouchDistance(t1, t2);
-        pinchStartZoom = zoom;
-
-        const center = getTouchCenter(t1, t2);
-        pinchCenterClientX = center.x;
-        pinchCenterClientY = center.y;
-      }
-
-      e.preventDefault();
-    }, { passive: false });
-
-    viewport.addEventListener("touchmove", (e) => {
-      if (isPinching && e.touches.length === 2) {
-        const t1 = e.touches[0];
-        const t2 = e.touches[1];
-
-        const currentDistance = getTouchDistance(t1, t2);
-        if (pinchStartDistance > 0) {
-          const scale = currentDistance / pinchStartDistance;
-          zoomToPoint(pinchStartZoom * scale, pinchCenterClientX, pinchCenterClientY);
-        }
-
-        e.preventDefault();
-        return;
-      }
-
-      if (isDragging && e.touches.length === 1) {
-        const t = e.touches[0];
-        const dx = t.clientX - dragStartX;
-        const dy = t.clientY - dragStartY;
-
-        if (Math.abs(dx) > 3 || Math.abs(dy) > 3) {
-          dragMoved = true;
-        }
-
-        viewport.scrollLeft = startScrollLeft - dx;
-        viewport.scrollTop = startScrollTop - dy;
-
-        e.preventDefault();
-      }
-    }, { passive: false });
-
-    viewport.addEventListener("touchend", (e) => {
-      if (e.touches.length === 0) {
-        isDragging = false;
-        isPinching = false;
-
-        const now = Date.now();
-        if (!dragMoved && now - lastTapTime < 300) {
-          resetToFit();
-        }
-        lastTapTime = now;
-
-        setTimeout(() => {
-          dragMoved = false;
-        }, 0);
-      } else if (e.touches.length === 1) {
-        isPinching = false;
-
-        const t = e.touches[0];
-        isDragging = true;
-        dragStartX = t.clientX;
-        dragStartY = t.clientY;
-        startScrollLeft = viewport.scrollLeft;
-        startScrollTop = viewport.scrollTop;
-      }
-    }, { passive: false });
-
-    mapImage.src = ACTUAL_IMAGE_SRC;
-
-    viewport.addEventListener("dblclick", (e) => {
-      e.preventDefault();
-      resetToFit();
-    });
-
-    window.addEventListener("resize", () => {
-      const previousFitZoom = fitZoom;
-      fitZoom = Math.max(MIN_ZOOM, Number(getFitZoom().toFixed(4)));
-
-      const wasAtFit = Math.abs(zoom - previousFitZoom) < 0.01;
-
-      if (wasAtFit || zoom < fitZoom) {
-        zoom = fitZoom;
-        renderAll();
-        centerViewport();
-      }
-    });
-
-    requestAnimationFrame(() => {
-      fitZoom = Math.max(MIN_ZOOM, Number(getFitZoom().toFixed(4)));
-      zoom = fitZoom;
-      renderAll();
-      centerViewport();
-      startApiRefresh();
-    });
-
-    window.addEventListener("beforeunload", () => {
-      markerApi.stopAutoRefresh();
-    });
-  </script>
-  <script>
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("service-worker.js")
-          .then(() => console.log("Service Worker registered"))
-          .catch(err => console.error("SW failed", err));
-      });
-    }
-  </script>
 </body>
 </html>
