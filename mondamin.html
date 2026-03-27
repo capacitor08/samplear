@@ -21,8 +21,6 @@
       font-family: Arial, sans-serif;
       touch-action: none;
       overscroll-behavior: none;
-      position: fixed;
-      inset: 0;
     }
 
     .map-page {
@@ -118,17 +116,7 @@
   </style>
 </head>
 <body>
-  <div class="map-page">
-    <div class="map-panel">
-      <div id="viewport" class="map-viewport">
-        <div id="stage" class="map-stage">
-          <img id="mapImage" class="map-image" alt="Map" />
-          <div id="markersLayer"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-    <div id="debugBox" style="
+  <div id="debugBox" style="
       position: fixed;
       top: 0;
       left: 0;
@@ -142,6 +130,16 @@
       pointer-events: none;
     ">
       DEBUG LOADED
+  </div>
+  <div class="map-page">
+    <div class="map-panel">
+      <div id="viewport" class="map-viewport">
+        <div id="stage" class="map-stage">
+          <img id="mapImage" class="map-image" alt="Map" />
+          <div id="markersLayer"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="markerApi.js"></script>
