@@ -214,8 +214,23 @@
       const viewportWidth = viewport.clientWidth;
       const viewportHeight = viewport.clientHeight;
 
-      viewport.scrollLeft = Math.max(0, (contentWidth - viewportWidth) / 2);
-      viewport.scrollTop = Math.max(0, (contentHeight - viewportHeight) / 2);
+      // 👉 Horizontal
+      if (contentWidth < viewportWidth) {
+        stage.style.marginLeft = ((viewportWidth - contentWidth) / 2) + "px";
+        viewport.scrollLeft = 0;
+      } else {
+        stage.style.marginLeft = "0px";
+        viewport.scrollLeft = (contentWidth - viewportWidth) / 2;
+      }
+
+      // 👉 Vertical
+      if (contentHeight < viewportHeight) {
+        stage.style.marginTop = ((viewportHeight - contentHeight) / 2) + "px";
+        viewport.scrollTop = 0;
+      } else {
+        stage.style.marginTop = "0px";
+        viewport.scrollTop = (contentHeight - viewportHeight) / 2;
+      }
     }
 
     function escapeHtml(value) {
