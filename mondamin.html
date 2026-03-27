@@ -16,6 +16,7 @@
       overflow: hidden;
       background: #f3f4f6;
       font-family: Arial, sans-serif;
+      touch-action: none;
     }
 
     .map-page {
@@ -58,6 +59,12 @@
       -webkit-user-drag: none;
       user-select: none;
       pointer-events: auto;
+    }
+
+    .map-page,
+    .map-panel,
+    .map-viewport {
+      touch-action: none;
     }
 
     .marker {
