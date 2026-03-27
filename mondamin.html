@@ -238,6 +238,24 @@ function zoomTo(z){
   viewport.scrollTop = iy*zoom - viewport.clientHeight/2;
 }
 
+function zoomToPoint(newZoom, clientX, clientY) {
+  const prev = zoom;
+  zoom = clamp(newZoom, fitZoom, 5);
+
+  const rect = viewport.getBoundingClientRect();
+
+  const px = clientX - rect.left + viewport.scrollLeft;
+  const py = clientY - rect.top + viewport.scrollTop;
+
+  const ix = px / prev;
+  const iy = py / prev;
+
+  renderAll();
+
+  viewport.scrollLeft = ix * zoom - (clientX - rect.left);
+  viewport.scrollTop = iy * zoom - (clientY - rect.top);
+}
+
 viewport.addEventListener("wheel",e=>{
   e.preventDefault();
   zoomTo(zoom + (e.deltaY<0?0.25:-0.25));
@@ -261,6 +279,105 @@ window.addEventListener("mousemove",e=>{
 });
 
 window.addEventListener("mouseup",()=> isDragging=false);
+
+
+// 🔥 PINCH SUPPORT (Pointer Events)
+
+const activePointers = new Map();
+let prevPinchDistance = -1;
+
+function getDistance(p1, p2) {
+  const dx = p2.x - p1.x;
+  const dy = p2.y - p1.y;
+  return Math.hypot(dx, dy);
+}
+
+function getCenter(p1, p2) {
+  return {
+    x: (p1.x + p2.x) / 2,
+    y: (p1.y + p2.y) / 2
+  };
+}
+
+viewport.addEventListener("pointerdown", (e) => {
+  viewport.setPointerCapture?.(e.pointerId);
+
+  activePointers.set(e.pointerId, {
+    x: e.clientX,
+    y: e.clientY
+  });
+
+  if (activePointers.size === 1) {
+    isDragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    startL = viewport.scrollLeft;
+    startT = viewport.scrollTop;
+  }
+
+  if (activePointers.size === 2) {
+    isDragging = false;
+    const [p1, p2] = [...activePointers.values()];
+    prevPinchDistance = getDistance(p1, p2);
+  }
+
+}, { passive: false });
+
+viewport.addEventListener("pointermove", (e) => {
+  if (!activePointers.has(e.pointerId)) return;
+
+  activePointers.set(e.pointerId, {
+    x: e.clientX,
+    y: e.clientY
+  });
+
+  if (activePointers.size === 2) {
+    const [p1, p2] = [...activePointers.values()];
+    const dist = getDistance(p1, p2);
+
+    if (prevPinchDistance > 0) {
+      const scale = dist / prevPinchDistance;
+      const center = getCenter(p1, p2);
+      zoomToPoint(zoom * scale, center.x, center.y);
+    }
+
+    prevPinchDistance = dist;
+    return;
+  }
+
+  if (isDragging && activePointers.size === 1) {
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+
+    viewport.scrollLeft = startL - dx;
+    viewport.scrollTop = startT - dy;
+  }
+
+}, { passive: false });
+
+function endPointer(e) {
+  activePointers.delete(e.pointerId);
+
+  if (activePointers.size === 0) {
+    isDragging = false;
+    prevPinchDistance = -1;
+  }
+
+  if (activePointers.size === 1) {
+    const p = [...activePointers.values()][0];
+
+    isDragging = true;
+    startX = p.x;
+    startY = p.y;
+    startL = viewport.scrollLeft;
+    startT = viewport.scrollTop;
+  }
+}
+
+viewport.addEventListener("pointerup", endPointer);
+viewport.addEventListener("pointercancel", endPointer);
+viewport.addEventListener("pointerleave", endPointer);
+
 
 function startApi(){
   markerApi.startAutoRefresh(data=>{
