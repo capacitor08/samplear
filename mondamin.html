@@ -50,10 +50,6 @@
       touch-action: none;
       overscroll-behavior: none;
       -webkit-overflow-scrolling: auto;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .map-viewport.dragging {
@@ -61,11 +57,10 @@
     }
 
     .map-stage {
-      position: relative;
+      position: absolute;
+      left: 0;
+      top: 0;
       transform-origin: top left;
-      touch-action: none;
-
-      flex: 0 0 auto;
     }
 
     .map-image {
@@ -166,11 +161,14 @@ function getFitZoom(){
 }
 
 function updateStage(){
-  stage.style.width = (IMAGE_WIDTH * zoom) + "px";
-  stage.style.height = (IMAGE_HEIGHT * zoom) + "px";
+  const w = IMAGE_WIDTH * zoom;
+  const h = IMAGE_HEIGHT * zoom;
 
-  mapImage.style.width = (IMAGE_WIDTH * zoom) + "px";
-  mapImage.style.height = (IMAGE_HEIGHT * zoom) + "px";
+  stage.style.width = w + "px";
+  stage.style.height = h + "px";
+
+  mapImage.style.width = w + "px";
+  mapImage.style.height = h + "px";
 }
 
 function centerViewport() {
@@ -180,16 +178,18 @@ function centerViewport() {
   const viewportWidth = viewport.clientWidth;
   const viewportHeight = viewport.clientHeight;
 
-  if (contentWidth > viewportWidth) {
-    viewport.scrollLeft = (contentWidth - viewportWidth) / 2;
+  if (contentWidth < viewportWidth) {
+    stage.style.left = ((viewportWidth - contentWidth) / 2) + "px";
   } else {
-    viewport.scrollLeft = 0;
+    stage.style.left = "0px";
+    viewport.scrollLeft = (contentWidth - viewportWidth) / 2;
   }
 
-  if (contentHeight > viewportHeight) {
-    viewport.scrollTop = (contentHeight - viewportHeight) / 2;
+  if (contentHeight < viewportHeight) {
+    stage.style.top = ((viewportHeight - contentHeight) / 2) + "px";
   } else {
-    viewport.scrollTop = 0;
+    stage.style.top = "0px";
+    viewport.scrollTop = (contentHeight - viewportHeight) / 2;
   }
 }
 
