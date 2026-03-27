@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+  />
   <title>Map Marker App</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#111827">
@@ -17,12 +20,19 @@
       background: #f3f4f6;
       font-family: Arial, sans-serif;
       touch-action: none;
+      overscroll-behavior: none;
+    }
+
+    body {
+      position: fixed;
+      inset: 0;
     }
 
     .map-page {
       width: 100vw;
       height: 100vh;
       padding: 12px;
+      touch-action: none;
     }
 
     .map-panel {
@@ -32,6 +42,7 @@
       border-radius: 18px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.08);
       overflow: hidden;
+      touch-action: none;
     }
 
     .map-viewport {
@@ -42,6 +53,8 @@
       background: #fff;
       cursor: grab;
       user-select: none;
+      touch-action: none;
+      overscroll-behavior: none;
     }
 
     .map-viewport.dragging {
@@ -51,6 +64,7 @@
     .map-stage {
       position: relative;
       transform-origin: top left;
+      touch-action: none;
     }
 
     .map-image {
@@ -59,11 +73,6 @@
       -webkit-user-drag: none;
       user-select: none;
       pointer-events: auto;
-    }
-
-    .map-page,
-    .map-panel,
-    .map-viewport {
       touch-action: none;
     }
 
@@ -123,6 +132,22 @@
   </div>
 
   <script src="markerApi.js"></script>
+
+  <script>
+    // Block browser-level gesture zooming.
+    ["gesturestart", "gesturechange", "gestureend"].forEach((eventName) => {
+      document.addEventListener(eventName, (e) => {
+        e.preventDefault();
+      }, { passive: false });
+    });
+
+    document.addEventListener("touchmove", (e) => {
+      if (e.touches.length > 1) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+  </script>
+
   <script>
     const ACTUAL_IMAGE_SRC = "mondamin_map.png";
     const IMAGE_WIDTH = 2048;
@@ -136,6 +161,7 @@
     let zoom = 1;
     let fitZoom = 1;
     let markers = [];
+
     let isDragging = false;
     let dragMoved = false;
     let dragStartX = 0;
@@ -188,7 +214,6 @@
       const scaleY = availableHeight / IMAGE_HEIGHT;
 
       const isPortrait = availableHeight > availableWidth;
-
       if (isPortrait) {
         return scaleX;
       }
@@ -461,6 +486,7 @@
       markerApi.stopAutoRefresh();
     });
   </script>
+
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
