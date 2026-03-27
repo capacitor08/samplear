@@ -21,17 +21,14 @@
       font-family: Arial, sans-serif;
       touch-action: none;
       overscroll-behavior: none;
-    }
-
-    body {
       position: fixed;
       inset: 0;
     }
 
     .map-page {
       width: 100vw;
-      height: 100vh;
-      padding: 12px;
+      height: 100dvh;
+      padding: 8px;
       touch-action: none;
     }
 
@@ -55,6 +52,7 @@
       user-select: none;
       touch-action: none;
       overscroll-behavior: none;
+      -webkit-overflow-scrolling: auto;
     }
 
     .map-viewport.dragging {
@@ -134,7 +132,11 @@
   <script src="markerApi.js"></script>
 
   <script>
-    // Block browser-level gesture zooming.
+    function isInsideMap(target) {
+      const viewport = document.getElementById("viewport");
+      return viewport && viewport.contains(target);
+    }
+
     ["gesturestart", "gesturechange", "gestureend"].forEach((eventName) => {
       document.addEventListener(eventName, (e) => {
         e.preventDefault();
@@ -142,7 +144,18 @@
     });
 
     document.addEventListener("touchmove", (e) => {
+      if (!isInsideMap(e.target)) {
+        e.preventDefault();
+        return;
+      }
+
       if (e.touches.length > 1) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    document.addEventListener("touchstart", (e) => {
+      if (e.touches.length > 1 && isInsideMap(e.target)) {
         e.preventDefault();
       }
     }, { passive: false });
@@ -214,8 +227,9 @@
       const scaleY = availableHeight / IMAGE_HEIGHT;
 
       const isPortrait = availableHeight > availableWidth;
+
       if (isPortrait) {
-        return scaleX;
+        return Math.min(scaleX, scaleY * 1.15);
       }
 
       return Math.min(scaleX, scaleY);
@@ -378,10 +392,12 @@
         dragStartY = t.clientY;
         startScrollLeft = viewport.scrollLeft;
         startScrollTop = viewport.scrollTop;
+        viewport.classList.add("dragging");
       } else if (e.touches.length === 2) {
         isDragging = false;
         isPinching = true;
         dragMoved = true;
+        viewport.classList.remove("dragging");
 
         const t1 = e.touches[0];
         const t2 = e.touches[1];
@@ -432,6 +448,7 @@
       if (e.touches.length === 0) {
         isDragging = false;
         isPinching = false;
+        viewport.classList.remove("dragging");
 
         const now = Date.now();
         if (!dragMoved && now - lastTapTime < 300) {
@@ -451,6 +468,7 @@
         dragStartY = t.clientY;
         startScrollLeft = viewport.scrollLeft;
         startScrollTop = viewport.scrollTop;
+        viewport.classList.add("dragging");
       }
     }, { passive: false });
 
