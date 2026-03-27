@@ -51,6 +51,13 @@
       "x": 1200,
       "y": 900,
       "description": ""
+    },
+    {
+      "id": "mvrcjbad",
+      "label": "Marker 8",
+      "x": 1000,
+      "y": 640,
+      "description": ""
     }
   ]
 }
