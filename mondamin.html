@@ -484,42 +484,45 @@
     });
   </script>
   <div id="debugBox" style="
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: red;
-    color: white;
-    font-size: 16px;
-    padding: 10px;
-    z-index: 99999;
-  ">
-    debug
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: red;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 12px;
+      z-index: 2147483647;
+      pointer-events: none;
+    ">
+      DEBUG LOADED
   </div>
 
   <script>
     const debugBox = document.getElementById("debugBox");
+    debug("SCRIPT STARTED");
 
     function debug(msg) {
       if (!debugBox) return;
-      debugBox.innerText = msg;
+      debugBox.innerText = msg + " | " + new Date().toLocaleTimeString();
     }
 
     // Track pointer activity
     viewport.addEventListener("pointerdown", (e) => {
-      debug(`pointerdown: ${e.pointerType} id=${e.pointerId}`);
+      debug(`DOWN ${e.pointerType} id=${e.pointerId}`);
     });
 
     viewport.addEventListener("pointermove", (e) => {
-      debug(`pointermove: ${e.pointerType} active=${activePointers.size}`);
+      debug(`MOVE ${e.pointerType} active=${activePointers.size}`);
     });
 
     viewport.addEventListener("pointerup", (e) => {
-      debug(`pointerup: id=${e.pointerId}`);
+      debug(`UP id=${e.pointerId}`);
     });
 
-    // Track touch (to detect fallback)
     viewport.addEventListener("touchstart", (e) => {
-      debug(`touchstart: ${e.touches.length} fingers`);
+      debug(`TOUCH ${e.touches.length}`);
     });
 
     // Track wheel (desktop)
